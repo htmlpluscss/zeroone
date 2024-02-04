@@ -12,10 +12,11 @@
 
 @import url(first-screen.css);
 @import url(stat-top.css);
+@import url(form-create.css);
+@import url(recent-games.css);
 
-/*@import url(experts.css);
+/*
 @import url(tailored-solutions.css);
-@import url(shop-broker.css);
 @import url(how-work.css);
 @import url(crypto.css);
 @import url(event.css);

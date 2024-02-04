@@ -1,0 +1,72 @@
+.form-create {
+
+	padding: 40px 60px;
+	border-radius: 20px;
+	border: 1px solid;
+	border-image-source: linear-gradient(132.24deg, rgba(255, 255, 255, 0.2) -63.87%, rgba(255, 255, 255, 0) 85.05%);
+	background:
+		linear-gradient(132.24deg, rgba(255, 255, 255, 0.2) -63.87%, rgba(255, 255, 255, 0) 85.05%),
+		linear-gradient(0deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04));
+
+	&__title {
+
+		text-align: center;
+		margin-bottom: 32px;
+
+	}
+
+	&__inputbox {
+
+		margin: 20px 0;
+
+	}
+
+	&__label {
+
+		display: block;
+		margin-bottom: 4px;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 20px;
+		letter-spacing: 0.01em;
+
+	}
+
+	&__foot {
+
+		margin: 32px 0;
+
+		.btn {
+
+			width: 100%;
+
+		}
+
+	}
+
+	&__alt {
+
+		text-align: center;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 20px;
+		margin: 20px 0;
+		opacity: .5;
+
+	}
+
+	.social {
+
+		display: flex;
+		justify-content: center;
+
+		svg {
+
+			width: 56px;
+			height: 56px;
+
+		}
+
+	}
+
+}

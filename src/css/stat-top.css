@@ -2,11 +2,93 @@
 
 	&__item {
 
+		display: flex;
+		border-radius: 16px;
+		padding: 8px;
+		gap: 8px;
+		background-color: rgba( 255, 255, 255, .04);
+
 		& + & {
 
 			margin-top: 12px;
 
 		}
+
+	}
+
+	&__foot {
+
+		flex-shrink: 0;
+		padding: 8px 16px;
+		border-radius: 8px;
+		background-color: rgba( 255, 255, 255, .04);
+		text-align: center;
+		min-width: 102px;
+
+	}
+
+	&__price {
+
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 20px;
+		margin-bottom: 2px;
+		opacity: .5;
+
+	}
+
+	&__rate {
+
+		font-family: Unbounded;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 24px;
+		color: var(--orange);
+
+	}
+
+	&__head {
+
+		width: 60px;
+		flex-shrink: 0;
+
+	}
+
+	&__body {
+
+		padding: 0 8px;
+		flex-grow: 1;
+		align-self: center;
+
+	}
+
+	&__name {
+
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+
+		&.in-progress::after {
+
+			width: 8px;
+			height: 8px;
+			content: '';
+			display: inline-block;
+			border-radius: 50%;
+			background-color: var(--green);
+			margin-left: 4px;
+
+		}
+
+	}
+
+	&__time {
+
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 20px;
+		opacity: .5;
+		margin-top: 4px;
 
 	}
 

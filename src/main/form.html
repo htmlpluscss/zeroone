@@ -1,66 +1,41 @@
-				<ul class="stat-top">
+				<form action="/form/create.php" class="form-create form">
 
-{% for item in [
-	{
-		logo : "dota",
-		name : "Defense of the Ancients (Dota)",
-		rate : "2.03"
-	},
-	{
-		logo : "cs",
-		name : "Counter-Strike Global Offensive (CS GO)",
-		rate : "6.03"
-	},
-	{
-		logo : "hearthstone",
-		name : "Hearthstone",
-		rate : "2.03"
-	},
-	{
-		logo : "dota",
-		name : "Defense of the Ancients (Dota)",
-		rate : "2.03"
-	}
-]%}
+					<p class="form-create__title h4">
+						Поставь на победу
+					</p>
 
-					<li class="stat-top__item">
+					<div class="form-create__inputbox">
 
-						<div class="stat-top__head">
+						<label for="form-create-name" class="form-create__label">
+							Имя
+						</label>
 
-							<div class="stat-top__logo">
+						<input class="input" name="name" placeholder="Введите данные" required="required" id="form-create-name">
 
-								<img src="/img/stat-top/{{ item.logo }}.png" srcset="/img/stat-top/{{ item.logo }}@2x.png 2x" alt="{{ item.name }}">
+					</div>
 
-							</div>
+					<div class="form-create__inputbox">
 
-						</div>
+						<label for="form-create-email" class="form-create__label">
+							E-mail
+						</label>
 
-						<div class="stat-top__body">
+						<input class="input" name="email" placeholder="Введите данные" required="required" id="form-create-email" type="email">
 
-							<div class="stat-top__name in-progress">
-								{{ item.name }}
-							</div>
+					</div>
 
-							<div class="stat-top__time">
-								2:56:56
-							</div>
+					<div class="form-create__foot">
 
-						</div>
+						<button class="btn btn--orange form__submit">
+							Создать аккаунт
+						</button>
 
-						<div class="stat-top__foot">
+					</div>
 
-							<div class="stat-top__price">
-								1.00 ETH
-							</div>
+					<p class="form-create__alt">
+						или войдите с помощью любой соцсети
+					</p>
 
-							<div class="stat-top__rate">
-								{{ item.rate }}х
-							</div>
+{% include "template/social.html" %}
 
-						</div>
-
-					</li>
-
-{% endfor %}
-
-				</ul>
+				</form>
