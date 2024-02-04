@@ -1,0 +1,134 @@
+		<section class="event" id="event">
+
+			<div class="center">
+
+				<div class="event__main">
+
+					<div class="event__main-photo">
+
+						<picture>
+
+							<source srcset="/img/event/main--320x284.webp" type="image/webp" media="(max-width: 360px)">
+							<source srcset="/img/event/main--320x284.jpg" media="(max-width: 360px)">
+
+							<source srcset="/img/event/main--1328x960.webp" type="image/webp" media="(max-width: 1199px)">
+							<source srcset="/img/event/main--1328x960.jpg" media="(max-width: 1199px)">
+
+							<source srcset="/img/event/main--540x480.webp 1x, /img/event/main--1080x960.webp 2x" type="image/webp">
+							<source srcset="/img/event/main--540x480.jpg 1x, /img/event/main--1080x960.jpg 2x">
+
+							<img src="/img/event/main--540x480.jpg" width="540" height="480" alt="" loading="lazy">
+
+						</picture>
+
+					</div>
+
+					<div class="event__main-content">
+
+						<h2 class="event__title h2">
+		{% if lang === "en" -%}
+							Launch Event of the <b>Grandala</b>
+							<small class="h4">where Home meets Hotel</small>
+		{% else %}
+							Старт продаж проекта <b>Grandala</b>,
+							<small class="h4">апартаментов с отельным сервисом</small>
+		{%- endif %}
+						</h2>
+
+						<time class="event__date" datetime="2024-02-03">
+		{% if lang === "en" -%}
+							3rd February&nbsp;&nbsp;|&nbsp;&nbsp;12:30PM onwards
+		{% else %}
+							3е февраля, с 12:30
+		{%- endif %}
+						</time>
+
+						<p class="event__address">
+		{% if lang === "en" -%}
+							<em>Venue:</em> Zabeel Theatre, Jumeirah Zabeel Saray Hotel, Palm Jumeirah, Dubai
+		{% else %}
+							<em>Место проведения:</em> Zabeel Theatre, Jumeirah Zabeel Saray Hotel, Palm Jumeirah, Dubai
+		{%- endif %}
+						</p>
+
+						<hr>
+
+						<p class="event__text">
+		{% if lang === "en" -%}
+							Secure your dream apartment with an early bird fee and exclusive benefits!
+		{% else %}
+							Забронируйте квартиру вашей мечты на эксклюзивных условиях за раннее бронирование!
+		{%- endif %}
+						</p>
+
+						<div class="event__btn">
+
+							<a href="https://forms.gle/42eUyJpBscvnstURA" class="btn btn--dark" target="_blank">
+		{% if lang === "en" -%}
+								register for event
+		{% else %}
+								регистрация на мероприятие
+		{%- endif %}
+							</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="event__gallery swiper swiper--event">
+
+					<ul class="event__gallery-list swiper-wrapper">
+
+{% for i in [1,2,3,4] %}
+
+						<li class="event__gallery-item event__gallery-item--{{ i }} swiper-slide">
+
+							<picture>
+
+								<source srcset="/img/event/{{ i }}--260x174.webp" type="image/webp" media="(max-width: 727px)">
+								<source srcset="/img/event/{{ i }}--260x174.jpg" media="(max-width: 727px)">
+
+								<source srcset="/img/event/{{ i }}--640x560.webp" type="image/webp" media="(max-width: 1199px)">
+								<source srcset="/img/event/{{ i }}--640x560.jpg" media="(max-width: 1199px)">
+
+								<source srcset="/img/event/{{ i }}--264x234.webp 1x, /img/event/{{ i }}--528x468.webp 2x" type="image/webp">
+								<source srcset="/img/event/{{ i }}--264x234.jpg 1x, /img/event/{{ i }}--528x468.jpg 2x">
+
+								<img src="/img/event/{{ i }}--264x234.jpg" width="264" height="234" alt="" loading="lazy">
+
+							</picture>
+
+						</li>
+
+{% endfor %}
+
+						<li class="event__gallery-item event__gallery-item--5 swiper-slide">
+
+							<picture>
+
+								<source srcset="/img/event/5--260x174.webp" type="image/webp" media="(max-width: 727px)">
+								<source srcset="/img/event/5--260x174.jpg" media="(max-width: 727px)">
+
+								<source srcset="/img/event/5--640x560.webp" type="image/webp" media="(max-width: 1199px)">
+								<source srcset="/img/event/5--640x560.jpg" media="(max-width: 1199px)">
+
+								<source srcset="/img/event/5--528x480.webp 1x, /img/event/5--1056x960.webp 2x" type="image/webp">
+								<source srcset="/img/event/5--528x480.jpg 1x, /img/event/5--1056x960.jpg 2x">
+
+								<img src="/img/event/5--528x480.jpg" width="528" height="480" alt="" loading="lazy">
+
+							</picture>
+
+						</li>
+
+					</ul>
+
+					<span class="swiper-scrollbar"></span>
+
+				</div>
+
+			</div>
+
+		</section>

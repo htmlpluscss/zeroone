@@ -1,0 +1,28 @@
+{% set title = "Поставь на победу" %}
+{% set description = "Зарабатывай реальные деньги, играя в любимые игры!" %}
+
+{% set preloadImage = [
+	{
+		media : "(min-width: 769px)",
+		img   : "/img/first-screen/1536x1024.webp",
+		imagesrcset : "/img/first-screen/1536x1024.webp 1x, /img/first-screen/3072x2048.webp 2x"
+	},
+	{
+		media : "(min-width: 361px) and (max-width: 768px)",
+		img   : "/img/first-screen/1456x1990.webp",
+		imagesrcset : "/img/first-screen/1456x1990.webp"
+	},
+	{
+		media : "(max-width: 412px)",
+		img   : "/img/first-screen/824x1646.webp",
+		imagesrcset : "/img/first-screen/824x1646.webp"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% include "main/first-screen.html" %}
+
+{% endblock %}

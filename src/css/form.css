@@ -1,0 +1,230 @@
+.btn,
+.button {
+
+	border: 0;
+	border-radius: 0;
+	font-family: inherit;
+	background-color: transparent;
+	transition: var(--transitionDefault);
+	user-select: none;
+	position: relative;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+	display: block;
+
+	&:hover {
+
+		cursor: pointer;
+
+	}
+
+	&:focus {
+
+		outline: none;
+
+	}
+
+	&:disabled {
+
+		pointer-events: none;
+
+	}
+
+}
+
+.btn {
+
+	padding: 14px 24px;
+	line-height: 20px;
+	font-weight: 500;
+	font-size: 14px;
+	border-radius: 12px;
+	color: var(--color);
+	font-family: Unbounded;
+
+	&--orange {
+
+		background-color: var(--orangeGrad);
+
+		@media $desktop {
+
+			&:hover {
+
+				background-color: var(--orange);
+
+			}
+
+		}
+
+	}
+
+	&--grey {
+
+		background-color: rgba(255, 255, 255, .06);
+
+		@media $desktop {
+
+			&:hover {
+
+				background-color: rgba(255, 255, 255, .1);
+
+			}
+
+		}
+
+	}
+
+}
+
+.input {
+
+	line-height: 24px;
+	padding: 12px 16px;
+	font-size: 16px;
+	font-weight: 500;
+	color: currentColor;
+
+	width: 100%;
+	font-family: inherit;
+	position: relative;
+	appearance: none;
+	display: block;
+	filter: none;
+	-webkit-transform: translateZ(0px);
+
+	background-color: rgba(255, 255, 255, .13);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+
+	&::placeholder {
+
+		opacity: 1;
+		color: var(--gray);
+
+	}
+
+	&::-ms-clear {
+
+		display: none;
+
+	}
+
+	&:focus {
+
+		outline: none;
+		border-width: 2px;
+		border-color: var(--orange);
+
+	}
+
+	&:invalid {
+
+		box-shadow: none;
+
+	}
+
+	&:valid {
+
+		box-shadow: none;
+
+	}
+
+}
+/*
+
+.checkbox {
+
+	display: flex;
+	position: relative;
+	user-select: none;
+
+	&__input {
+
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 0;
+		left: 0;
+		appearance: none;
+		opacity: .0001;
+
+	}
+
+	&__input:checked + &__label {
+
+		&::before {
+
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23F9F5E9' d='M6.67 10.11 12.79 4l.95.94L6.67 12 2.42 7.76l.95-.95 3.3 3.3Z'/%3E%3C/svg%3E");
+			background-color: var(--color);
+			border-color: var(--color);
+
+		}
+
+	}
+
+	&__label {
+
+		display: block;
+		padding-left: 36px;
+		cursor: pointer;
+		font-size: 14px;
+		line-height: 20px;
+		color: var(--grey);
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: var(--transitionDefault);
+
+		@media $smWidth {
+
+			font-size: 12px;
+
+		}
+
+		a {
+
+			color: var(--color);
+			text-decoration: underline;
+
+			@media $desktop {
+
+				&:hover {
+
+					text-decoration: none;
+
+				}
+
+			}
+
+		}
+
+		&::before {
+
+			position: absolute;
+			width: 18px;
+			height: 18px;
+			top: 0;
+			left: 0;
+			content: '';
+			border: 1px solid;
+			background-position: center;
+
+		}
+
+		@media $desktop {
+
+			&:hover {
+
+				color: var(--color);
+
+			}
+
+		}
+
+	}
+
+}
+*/

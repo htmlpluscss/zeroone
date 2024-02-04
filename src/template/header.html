@@ -1,0 +1,33 @@
+	<header class="header{% if headerMod %} header--{{ headerMod }}{% endif %}">
+
+		<div class="center">
+
+			<div class="header__flex">
+
+				<div class="header__logo">
+
+					<a href="/{% if lang === 'ru' %}{{ lang }}/{% endif %}">
+
+{% include "template/logo.html" %}
+
+					</a>
+
+				</div>
+
+				<div class="header__left">
+
+{% include "template/location.html" %}
+
+				</div>
+
+				<div class="header__right">
+
+{% include "template/lang.html" %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</header>

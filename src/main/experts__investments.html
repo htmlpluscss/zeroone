@@ -1,0 +1,71 @@
+		<div class="expert-swiper">
+
+			<h4 class="expert-swiper__title h4">
+{% if lang === "en" -%}
+				Investments
+{% else %}
+				Показатели для инвестиций
+{%- endif %}
+			</h4>
+
+			<div class="expert-swiper__wrap">
+
+				<div class="swiper swiper--expert swiper--investments swiper--autoplay">
+
+					<div class="expert-swiper__list swiper-wrapper">
+
+{% set images = [
+	"Diversification of the UAE <br class=\"visible-sm\"> economy",
+	"Dubai Government's Population <br class=\"visible-sm\"> Growth Targets",
+	"Real estate prices <br class=\"visible-sm\"> per m²",
+	"Real estate prices in popular areas <br class=\"visible-sm\"> of the UAE"
+] %}
+
+{% if lang === "ru" %}
+
+{% set images = [
+	"Диверсификация экономики ОАЭ",
+	"Цели правительства Дубая по росту населения",
+	"Цены на недвижимость за квадратный метр",
+	"Цены на недвижимость в популярных районах ОАЭ"
+] %}
+
+{% endif %}
+
+{% for name in images %}
+
+						<figure class="expert-swiper__item swiper-slide swiper-slide--investments">
+
+							<figcaption class="expert-swiper__investments">
+								{{ name | safe }}
+							</figcaption>
+
+							<div class="expert-swiper__head">
+
+								<picture>
+
+									<source srcset="/img/experts/investments/{% if lang === 'ru' %}ru/{% endif %}{{ loop.index }}--640x880.webp" type="image/webp" media="(max-width: 727px)">
+									<source srcset="/img/experts/investments/{% if lang === 'ru' %}ru/{% endif %}{{ loop.index }}--640x880.png" media="(max-width: 727px)">
+
+									<source srcset="/img/experts/investments/{% if lang === 'ru' %}ru/{% endif %}{{ loop.index }}--600x310.webp 1x, /img/experts/investments/{% if lang === 'ru' %}ru/{% endif %}{{ loop.index }}--1200x620.webp 2x" type="image/webp">
+									<source srcset="/img/experts/investments/{% if lang === 'ru' %}ru/{% endif %}{{ loop.index }}--600x310.png 1x, /img/experts/investments/{% if lang === 'ru' %}ru/{% endif %}{{ loop.index }}--1200x620.png 2x">
+
+									<img src="/img/experts/investments/{% if lang === 'ru' %}ru/{% endif %}{{ loop.index }}--600x310.png" width="600" height="310" alt="{{ name | striptags }}" loading="lazy">
+
+								</picture>
+
+							</div>
+
+						</figure>
+
+{% endfor %}
+
+					</div>
+
+					<span class="swiper-scrollbar"></span>
+
+				</div>
+
+			</div>
+
+		</div>

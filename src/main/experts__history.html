@@ -1,0 +1,119 @@
+		<div class="expert-swiper">
+
+			<h4 class="expert-swiper__title h4">
+{% if lang === "en" -%}
+				History (1985-2022)
+{% else %}
+				История развития (1985-2022)
+{%- endif %}
+			</h4>
+
+			<div class="expert-swiper__wrap">
+
+				<div class="swiper swiper--expert swiper--autoplay">
+
+					<div class="expert-swiper__list swiper-wrapper">
+
+{% set images = [
+	{
+		text : "Early 1980s",
+		source: "Unknow"
+	},
+	{
+		text : "1991",
+		source: "Flashy Dubai"
+	},
+	{
+		text : "2001",
+		source: "The National News"
+	},
+	{
+		text : "2010",
+		source: "Samoa Global News"
+	},
+	{
+		text : "2021",
+		source: "Conde Nast Traveler"
+	},
+	{
+		text : "Dubai now",
+		source: "Designboom"
+	}
+] %}
+
+{% if lang === "ru" %}
+
+{% set images = [
+	{
+		text : "Начало 1980-х",
+		source: "Неизвестно"
+	},
+	{
+		text : "1991",
+		source: "Flashy Dubai"
+	},
+	{
+		text : "2001",
+		source: "The National News"
+	},
+	{
+		text : "2010",
+		source: "Samoa Global News"
+	},
+	{
+		text : "2021",
+		source: "Conde Nast Traveler"
+	},
+	{
+		text : "Дубай сегодня",
+		source: "Designboom"
+	}
+] %}
+
+{% endif %}
+
+{% for item in images %}
+
+						<div class="expert-swiper__item swiper-slide">
+
+							<figure class="expert-swiper__head">
+
+								<picture>
+
+									<source srcset="/img/experts/history/{{ loop.index }}--520x440.webp" type="image/webp" media="(max-width: 727px)">
+									<source srcset="/img/experts/history/{{ loop.index }}--520x440.jpg" media="(max-width: 727px)">
+
+									<source srcset="/img/experts/history/{{ loop.index }}--360x240.webp 1x, /img/experts/history/{{ loop.index }}--720x480.webp 2x" type="image/webp">
+									<source srcset="/img/experts/history/{{ loop.index }}--360x240.jpg 1x, /img/experts/history/{{ loop.index }}--720x480.jpg 2x">
+
+									<img src="/img/experts/history/{{ loop.index }}--360x240.jpg" width="360" height="240" alt="{{ item.text }}" loading="lazy">
+
+								</picture>
+
+								<figcaption class="expert-swiper__history">
+
+									{{ item.text }}
+
+									<small>
+
+										{% if lang === "en" %}source{% else %}источник{% endif %}: {{ item.source }}
+
+									</small>
+
+								</figcaption>
+
+							</figure>
+
+						</div>
+
+{% endfor %}
+
+					</div>
+
+					<span class="swiper-scrollbar"></span>
+
+				</div>
+
+			</div>
+
+		</div>

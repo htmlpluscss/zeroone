@@ -1,0 +1,96 @@
+.visible-md,
+.visible-sm {
+
+	display: none;
+
+}
+
+.center {
+
+	width: 1080px;
+	max-width: 100%;
+	margin: 0 auto;
+
+}
+
+@media $desktop {
+
+}
+
+@media $tablet {
+
+}
+
+@media $mdWidth {
+
+	:root {
+
+		--margin: 72px;
+		--space: 48px;
+
+	}
+
+	.hidden-md {
+
+		display: none !important;
+
+	}
+
+	.visible-md {
+
+		display: block;
+
+	}
+
+	.center {
+
+		width: 768px;
+		padding: 0 var(--indent);
+
+	}
+
+}
+
+@media $smWidth {
+
+	:root {
+
+		--margin: 60px;
+		--gap: 20px;
+		--indent: 20px;
+		--space: 36px;
+
+	}
+
+	.hidden-sm {
+
+		display: none !important;
+
+	}
+
+	.visible-sm {
+
+		display: block;
+
+	}
+
+	.center {
+
+		width: 464px;
+		max-width: 100%;
+
+	}
+
+}
+
+@media $xsWidth {
+
+	:root {
+
+		--margin: 40px;
+		--space: 30px;
+		--indent: 10px;
+
+	}
+
+}

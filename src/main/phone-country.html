@@ -1,0 +1,19 @@
+					<div class="phone-country">
+
+						<input class="phone-country__code" type="hidden" name="country" value="{% if lang === 'en' %}ae{% else %}ru{% endif %}">
+
+						<input class="phone-country__mask input inputmask inputmask--phone" type="tel" name="phone" data-mask="{% if lang === 'en' %}+\971 99 999 9999{% else %}+7 999 9999999{% endif %}" required="required" placeholder="{% if lang === 'en' %}+971 00 000 0000{% else %}+7 000 0000000{% endif %}" autocomplete="off">
+
+						<button class="phone-country__toggle button" type="button">
+
+							<span class="phone-country__toggle-flag">
+
+								<img src="/img/flags/{% if lang === 'en' %}ae{% else %}ru{% endif %}.svg" width="16" height="12" loading="lazy" alt="{% if lang === 'en' %}United Arab Emirates{% else %}Российская Федерация{% endif %}">
+
+							</span>
+
+						</button>
+
+{% include "main/phone-country__list.html" %}
+
+					</div>

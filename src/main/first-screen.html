@@ -1,0 +1,98 @@
+		<div class="first-screen">
+
+			<div class="center">
+
+				<div class="first-screen__box">
+
+					<div class="first-screen__content fade-in fade-in--left fade-in--tablet-top">
+
+						<h1 class="first-screen__title h0">
+							{{ title }}
+						</h1>
+
+						<p class="first-screen__text">
+							{% if lang === "en" %}
+							Company with a big history, experience <br> in development and investment
+							{% else %}
+							Компания с большой историей и опытом в девелопменте недвижимости и&nbsp;инвестициях
+							{% endif %}
+						</p>
+
+					</div>
+
+					<ul class="first-screen__btns fade-in fade-in--right fade-in--tablet-top">
+
+						<li>
+
+							<a href="#experts">
+							{% if lang === "en" %}
+								Experts
+							{% else %}
+								Эксперты
+							{% endif %}
+							</a>
+
+						</li>
+
+						<li>
+
+							<a href="#tailored-solutions">
+							{% if lang === "en" %}
+								<span class="hidden-sm">Tailored</span> solutions
+							{% else %}
+								Решения
+							{% endif %}
+							</a>
+
+						</li>
+
+						<li>
+
+							<a href="#invest-now">
+							{% if lang === "en" %}
+								Invest now
+							{% else %}
+								Инвестировать
+							{% endif %}
+							</a>
+
+						</li>
+
+						<li>
+
+							<a href="#offer">
+							{% if lang === "en" %}
+								Offer
+							{% else %}
+								Ваш проект
+							{% endif %}
+							</a>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="first-screen__img">
+
+				<picture>
+
+					<source srcset="/img/first-screen/824x1646.webp" type="image/webp" media="(max-width: 412px)">
+					<source srcset="/img/first-screen/824x1646.jpg" media="(max-width: 412px)">
+
+					<source srcset="/img/first-screen/1456x1990.webp" type="image/webp" media="(max-width: 728px)">
+					<source srcset="/img/first-screen/1456x1990.jpg" media="(max-width: 728px)">
+
+					<source srcset="/img/first-screen/1536x1024.webp 1x, /img/first-screen/3072x2048.webp 2x" type="image/webp">
+					<source srcset="/img/first-screen/1536x1024.jpg 1x, /img/first-screen/3072x2048.jpg 2x">
+
+					<img src="/img/first-screen/1536x1024.jpg" alt="" loading="lazy" width="1536" height="1024">
+
+				</picture>
+
+			</div>
+
+		</div>

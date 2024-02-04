@@ -1,0 +1,41 @@
+		<aside class="clients">
+
+			<h2 class="h4 clients__title">
+{% if lang === "en" -%}
+				50+ projects implemented since&nbsp;2006
+{% else %}
+				Более 50 проектов реализовано с&nbsp;2006&nbsp;года
+{%- endif %}
+			</h2>
+
+			<p class="clients__intro">
+{% if lang === "en" -%}
+				Arex clients
+{% else %}
+				Клиенты Arex
+{%- endif %}
+			</p>
+
+			<ul class="clients__list">
+
+{% for img in ["damac","meraas","nakheel","deyaar","omniyat"]%}
+
+				<li class="clients__item">
+
+					<picture>
+
+						<source srcset="/img/clients/{{ img }}--mobile.svg" media="(max-width: 1199px)">
+
+						<source srcset="/img/clients/{{ img }}.svg">
+
+						<img src="/img/clients/{{ img }}.svg" width="100" height="40" alt="{{ img }}" loading="lazy">
+
+					</picture>
+
+				</li>
+
+{% endfor %}
+
+			</ul>
+
+		</aside>

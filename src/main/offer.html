@@ -1,0 +1,63 @@
+		<div class="offer" id="offer">
+
+			<div class="center">
+
+				<div class="offer__box">
+
+					<figure class="offer__img fade-in fade-in--left" data-modal="form"
+								data-title="{% if lang === 'ru' %}Связаться с нами{% else %}Contact us{% endif %}"
+								data-btn="{% if lang === 'ru' %}Отправить{% else %}Send{% endif %}"
+								data-subject="{% if lang === 'ru' %}Предложите нам Ваш проект{% else %}Offer us Your project{% endif %}">
+
+						<picture>
+
+							<source srcset="/img/offer/640x428.webp" type="image/webp" media="(max-width: 727px)">
+							<source srcset="/img/offer/640x428.jpg" media="(max-width: 727px)">
+
+							<source srcset="/img/offer/1328x1328.webp" type="image/webp" media="(max-width: 1199px)">
+							<source srcset="/img/offer/1328x1328.jpg" media="(max-width: 1199px)">
+
+							<source srcset="/img/offer/480x480.webp 1x, /img/offer/960x960.webp 2x" type="image/webp">
+							<source srcset="/img/offer/480x480.jpg 1x, /img/offer/960x960.jpg 2x">
+
+							<img src="/img/offer/480x480.jpg" width="480" height="480" alt="{% if lang === 'ru' %}Предложите нам Ваш проект{% else %}Offer us Your project{% endif %}" loading="lazy">
+
+						</picture>
+
+						<figcaption>
+
+{% if lang === "en" %}Photo{% else %}Фото{% endif %}: Barbara Burg + Oliver Schuh
+
+						</figcaption>
+
+					</figure>
+
+					<div class="offer__content fade-in fade-in--right">
+
+						<h3 class="offer__title h2">
+{% if lang === "en" -%}
+							Offer us Your project
+{% else %}
+							Предложите нам Ваш проект
+{%- endif %}
+						</h3>
+
+						<p class="offer__text">
+{% if lang === "en" -%}
+							If you have land, development project or&nbsp;real estate for renovation, please, contact&nbsp;us!
+{% else %}
+							Если у вас есть земельный участок, проект застройки или&nbsp;недвижимость для реновации, пожалуйста, свяжитесь с нами!
+{%- endif %}
+						</p>
+
+						<p class="offer__email">
+							<a href="mailto:partnership@palladium.ae">partnership@palladium.ae</a>
+						</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>

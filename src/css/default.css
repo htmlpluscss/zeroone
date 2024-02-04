@@ -1,0 +1,176 @@
+* {
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+html {
+
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	scroll-behavior: smooth;
+	overflow-y: scroll;
+
+	&.scroll-behavior-off {
+
+		scroll-behavior: auto;
+
+	}
+
+}
+
+body {
+
+	min-width: 320px;
+	color: var(--color);
+	font-size: 20px;
+	line-height: 1.4;
+	font-family: 'Inter', sans-serif;
+	-webkit-text-size-adjust: none;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: scrollbar;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	position: relative;
+	background-color: var(--bg);
+
+}
+
+a {
+
+	color: currentColor;
+	text-decoration: none;
+	transition: var(--transitionDefault);
+	cursor: pointer;
+
+}
+
+::selection {
+
+	color: var(--bg);
+	background-color: var(--color);
+
+}
+
+img {
+
+	border: 0;
+	display: block;
+	position: relative;
+
+}
+
+svg {
+
+	display: block;
+	position: relative;
+	fill: currentColor;
+	transition: var(--transitionDefault);
+
+}
+
+li {
+
+	list-style: none;
+	position: relative;
+
+}
+
+hr {
+
+	border: 0;
+	height: 1px;
+	background-color: var(--color);
+
+}
+
+.h1 {
+
+	font-family: 'Unbounded';
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 48px;
+
+	@media $mdWidth {
+
+
+	}
+
+	@media $smWidth {
+
+
+	}
+
+}
+
+.h2 {
+
+	font-family: 'Unbounded';
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 44px;
+
+}
+
+.h3 {
+
+	font-family: 'Unbounded';
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 40px;
+
+}
+
+.h4 {
+
+	font-family: 'Unbounded';
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 36px;
+
+}
+
+/*
+-----------------------------------------------------------------------------*/
+.main {
+
+	flex-shrink: 0;
+	flex-grow: 1;
+
+}
+
+.wrapper {
+
+	flex-shrink: 0;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+
+}
+
+/* hidden
+-----------------------------------------------------------------------------*/
+.hide {
+
+	display: none !important;
+
+}
+
+.visuallyhidden {
+
+	position: absolute !important;
+
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+
+	clip: rect(0 0 0 0) !important;
+	overflow: hidden !important;
+
+}

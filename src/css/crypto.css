@@ -1,0 +1,128 @@
+.crypto {
+
+	margin: 120px 0;
+
+	@media $mdWidth {
+
+		margin: var(--margin) 0;
+
+		.center {
+
+			width: 100%;
+
+		}
+
+	}
+
+	&__box {
+
+		overflow: hidden;
+		color: var(--milk);
+		background-color: var(--color);
+
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		@media $smWidth {
+
+			flex-direction: column-reverse;
+
+		}
+
+	}
+
+	&__text {
+
+		font-size: 24px;
+		text-align: center;
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: var(--indent);
+
+		p {
+
+			width: 286px;
+			margin-top: 10px;
+
+		}
+
+		[role="button"] {
+
+			text-decoration: underline;
+			font-style: italic;
+			cursor: pointer;
+
+			@media $desktop {
+
+				transition: var(--transitionDefault);
+
+				&:hover {
+
+					text-decoration-color: transparent;
+
+				}
+
+			}
+
+		}
+
+		@media $mdWidth {
+
+			font-size: 20px;
+
+		}
+
+		@media $smWidth {
+
+			padding: 56px 0;
+
+			svg {
+
+				width: 40px;
+				height: 40px;
+
+			}
+
+			p {
+
+				width: 238px;
+
+			}
+
+		}
+
+	}
+
+	&__img {
+
+		flex-shrink: 0;
+		width: 540px;
+
+		@media $mdWidth {
+
+			width: 50%;
+
+		}
+
+		@media $smWidth {
+
+			display: flex;
+			justify-content: center;
+			width: 100%;
+
+			img {
+
+				max-width: 100%;
+				height: auto;
+
+			}
+
+		}
+
+	}
+
+}
