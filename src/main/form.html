@@ -1,0 +1,66 @@
+				<ul class="stat-top">
+
+{% for item in [
+	{
+		logo : "dota",
+		name : "Defense of the Ancients (Dota)",
+		rate : "2.03"
+	},
+	{
+		logo : "cs",
+		name : "Counter-Strike Global Offensive (CS GO)",
+		rate : "6.03"
+	},
+	{
+		logo : "hearthstone",
+		name : "Hearthstone",
+		rate : "2.03"
+	},
+	{
+		logo : "dota",
+		name : "Defense of the Ancients (Dota)",
+		rate : "2.03"
+	}
+]%}
+
+					<li class="stat-top__item">
+
+						<div class="stat-top__head">
+
+							<div class="stat-top__logo">
+
+								<img src="/img/stat-top/{{ item.logo }}.png" srcset="/img/stat-top/{{ item.logo }}@2x.png 2x" alt="{{ item.name }}">
+
+							</div>
+
+						</div>
+
+						<div class="stat-top__body">
+
+							<div class="stat-top__name in-progress">
+								{{ item.name }}
+							</div>
+
+							<div class="stat-top__time">
+								2:56:56
+							</div>
+
+						</div>
+
+						<div class="stat-top__foot">
+
+							<div class="stat-top__price">
+								1.00 ETH
+							</div>
+
+							<div class="stat-top__rate">
+								{{ item.rate }}х
+							</div>
+
+						</div>
+
+					</li>
+
+{% endfor %}
+
+				</ul>

@@ -48,13 +48,13 @@
 
 	&--orange {
 
-		background-color: var(--orangeGrad);
+		background-image: var(--orangeGrad);
 
 		@media $desktop {
 
 			&:hover {
 
-				background-color: var(--orange);
+				--orangeGrad: linear-gradient(64.8deg, #FF6B22 105%, #FD810F 105%);
 
 			}
 

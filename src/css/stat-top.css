@@ -1,0 +1,13 @@
+.stat-top {
+
+	&__item {
+
+		& + & {
+
+			margin-top: 12px;
+
+		}
+
+	}
+
+}

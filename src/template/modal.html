@@ -2,61 +2,51 @@
 
 		<div class="modal__box">
 
-			<form action="/api/send.php" class="modal__item modal__item--form form" id="modal-form">
+			<form action="/form/login.php" class="modal__item modal__item--login form">
 
-				<input type="hidden" name="lang" value="{{ lang }}">
-				<input type="hidden" name="subject" value="">
-				<input type="hidden" name="object" value="">
-
-				<h3 class="form__title h2">
-{% if lang === "en" -%}
-					Contact us
-{% else %}
-					Свяжитесь с нами
-{%- endif %}
+				<h3 class="form__title h4">
+					Войти
 				</h3>
 
-				<div class="form__fieldset">
+				<div class="form__inputbox">
 
-					<div class="form__inputbox">
+					<label for="modal-login-name" class="form__label">
+						Логин
+					</label>
 
-						<input class="input" name="name" placeholder="{% if lang === 'en' %}Name{% else %}Имя{% endif %}" required="required">
-
-					</div>
-
-					<div class="form__inputbox">
-
-{% include "main/phone-country.html" %}
-
-					</div>
-
-					<div class="form__checkbox">
-
-						<label class="checkbox">
-
-							<input type="checkbox" class="checkbox__input" required="required" checked="checked">
-
-							<span class="checkbox__label">
-{% if lang === "en" -%}
-								I have read the <a href="/privacy-police/" target="_blank">privacy policy</a>
-{% else %}
-								Я ознакомился с <a href="/ru/privacy-police/" target="_blank">политикой конфиденциальности</a>
-{%- endif %}
-							</span>
-
-						</label>
-
-					</div>
+					<input class="input" name="name" placeholder="Введите данные" required="required" id="modal-login-name">
 
 				</div>
 
-				<button class="btn btn--dark form__submit">
-{% if lang === "en" -%}
-					Send
-{% else %}
-					Отправить
-{%- endif %}
-				</button>
+				<div class="form__inputbox">
+
+					<label for="modal-login-password" class="form__label">
+						Пароль
+					</label>
+
+					<input class="input" name="password" placeholder="Введите данные" required="required" id="modal-login-password" type="password">
+
+				</div>
+
+				<div class="form__recovery">
+
+					<button class="button" type="button" data-modal="recovery">
+						Забыл пароль
+					</button>
+
+				</div>
+
+				<div class="form__foot">
+
+					<button class="btn btn--orange form__submit">
+						Войти
+					</button>
+
+					<button class="btn btn--gray" type="button" data-modal="reg">
+						Регистрация
+					</button>
+
+				</div>
 
 			</form>
 
@@ -99,22 +89,10 @@
 
 			</aside>
 
-			<aside class="modal__item modal__item--details">
+			<button type="button" class="modal__close modal__close-btn button" aria-label="Закрыть">
 
-				<div class="modal-details">
-
-					<div class="modal-details__table" id="modal-details-table">
-
-					</div>
-
-				</div>
-
-			</aside>
-
-			<button type="button" class="modal__close modal__close-btn button" aria-label="{% if lang === 'en' %}Close{% else %}Закрыть{% endif %}">
-
-				<svg width="24" height="24" viewBox="0 0 24 24">
-					<path d="m12 10.59 4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.4 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41L12 10.59Z"/>
+				<svg width="16" height="16" viewBox="0 0 16 16">
+					<path stroke="#fff" stroke-linecap="square" stroke-linejoin="round" stroke-width="1.5" d="m12.5 4-8 8M12.5 12l-8-8"/>
 				</svg>
 
 			</button>

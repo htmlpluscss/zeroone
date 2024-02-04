@@ -1,28 +1,42 @@
-	<header class="header{% if headerMod %} header--{{ headerMod }}{% endif %}">
+	<header class="header">
 
 		<div class="center">
 
-			<div class="header__flex">
+			<div class="box">
 
-				<div class="header__logo">
+				<div class="box__inner">
 
-					<a href="/{% if lang === 'ru' %}{{ lang }}/{% endif %}">
+					<div class="header__flex">
 
-{% include "template/logo.html" %}
+						<div class="header__logo">
 
-					</a>
+							<a href="/">
 
-				</div>
+								<img src="/img/logo.svg" width="145" height="20" alt="{{ site }} logo">
 
-				<div class="header__left">
+							</a>
 
-{% include "template/location.html" %}
+						</div>
 
-				</div>
+						<nav class="header__menu">
 
-				<div class="header__right">
+							<ul>
+								<li class="is-current"><a href="/">Главная</a></li>
+								<li><a href="/">Как это работает</a></li>
+								<li><a href="/">Следи за нами</a></li>
+							</ul>
 
-{% include "template/lang.html" %}
+						</nav>
+
+						<div class="header__user">
+
+							<button class="btn btn--orange" type="button" data-modal="login">
+								Войти
+							</button>
+
+						</div>
+
+					</div>
 
 				</div>
 

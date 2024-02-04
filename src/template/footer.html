@@ -2,148 +2,40 @@
 
 		<div class="center">
 
-			<div class="footer__grid">
+			<div class="box">
 
-				<div class="footer__time">
+				<div class="box__inner">
 
-					<dl class="footer__time-item">
+					<div class="footer__flex">
 
-						<dt class="footer__time-dt">
+						<div class="footer__logo">
 
-							<svg width="24" height="24" viewBox="0 0 24 24">
-								<path fill-rule="evenodd" d="M12 20.5a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17Zm0 1.5a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" clip-rule="evenodd"/>
-								<path fill-rule="evenodd" d="M11.25 6h1.5v5.69l2.78 2.78-1.06 1.06-3.22-3.22V6Z" clip-rule="evenodd"/>
-							</svg>
+							<a href="/">
 
-						</dt>
+								<img src="/img/logo.svg" width="145" height="20" alt="{{ site }} logo">
 
-						<dd class="footer__time-dd">
-							{% if lang === "en" %}
-							Local time
-							{% else %}
-							Местное время
-							{% endif %}
-						</dd>
+							</a>
 
-					</dl>
+						</div>
 
-					<div class="footer__time-arrow">
+						<nav class="footer__menu">
 
-						<svg width="24" height="24" viewBox="0 0 24 24">
-							<path d="m11.97 18.47 1.06 1.06L20.56 12l-7.53-7.53-1.06 1.06 5.72 5.72H3v1.5h14.69l-5.72 5.72Z"/>
-						</svg>
+							<ul>
+								<li><a href="/">Главная</a></li>
+								<li><a href="/">Блог</a></li>
+								<li><a href="/">Поддержка</a></li>
+								<li><a href="/">Политика конфиденциальности</a></li>
+							</ul>
+
+						</nav>
+
+						<div class="footer__social">
+
+{% include "template/social.html" %}
+
+						</div>
 
 					</div>
-
-					<dl class="footer__time-item">
-
-						<dt class="footer__time-dt">
-							{% if lang === "en" %}
-							Dubai
-							{% else %}
-							Дубай
-							{% endif %}
-						</dt>
-
-						<dd class="footer__time-dd time" data-timeZone="Asia/Dubai">
-							20:00
-						</dd>
-
-					</dl>
-
-					<hr class="footer__time-sep">
-
-					<dl class="footer__time-item">
-
-						<dt class="footer__time-dt">
-							{% if lang === "en" %}
-							Miami
-							{% else %}
-							Майами
-							{% endif %}
-						</dt>
-
-						<dd class="footer__time-dd time" data-timeZone="America/New_York">
-							12:00
-						</dd>
-
-					</dl>
-
-					<dl class="footer__time-item">
-
-						<dt class="footer__time-dt">
-							{% if lang === "en" %}
-							Moscow
-							{% else %}
-							Москва
-							{% endif %}
-						</dt>
-
-						<dd class="footer__time-dd time" data-timeZone="Europe/Moscow">
-							19:00
-						</dd>
-
-					</dl>
-
-				</div>
-
-				<p class="footer__contact">
-
-					<span class="footer__contact-tel">
-
-						<a href="tel:+971543566441">
-							+971 54 356 64 41
-						</a>
-
-					</span>
-
-					<span class="footer__contact-email">
-
-						<a href="mailto:np@palladiumgroup.ae">
-							np@palladiumgroup.ae
-						</a>
-
-					</span>
-
-				</p>
-
-				<p class="footer__address">
-					United Arab Emirates, Dubai, Bay&nbsp;Square, building&nbsp;11, 4th&nbsp;floor, office&nbsp;403
-				</p>
-
-				<ul class="footer__rules">
-
-					<li>
-						<a href="{% if lang === 'ru' %}/{{ lang }}{% endif %}/terms-and-conditions/">
-							{% if lang === "en" %}
-								Terms of use
-							{% else %}
-								Пользовательское соглашение
-							{% endif %}
-						</a>
-					</li>
-
-					<li>
-						<a href="{% if lang === 'ru' %}/{{ lang }}{% endif %}/privacy-police/">
-							{% if lang === "en" %}
-								Privacy policy
-							{% else %}
-								Политика конфиденциальности
-							{% endif %}
-						</a>
-					</li>
-
-				</ul>
-
-				<div class="footer__copyright">
-
-					<p>
-						© 2024. Palladium Prime Real Estate Development, License&nbsp;Number&nbsp;<a href="/files/LLC-1094766.pdf" target="_blank">LLC-1094766</a>.
-					</p>
-
-					<p>
-						Palladium Realty Real Estate, License&nbsp;Number&nbsp;<a href="/files/LLC-1084718.pdf" target="_blank">LLC-1084718</a>.
-					</p>
 
 				</div>
 

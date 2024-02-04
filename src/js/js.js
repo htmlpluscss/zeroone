@@ -29,7 +29,7 @@ https://github.com/htmlpluscss/
 
 				windowWidthOLd = window.innerWidth;
 
-				document.documentElement.style.setProperty('--vh', document.documentElement.clientHeight + 'px');
+//				document.documentElement.style.setProperty('--vh', document.documentElement.clientHeight + 'px');
 
 			}
 

@@ -7,9 +7,10 @@
 
 .center {
 
-	width: 1080px;
+	width: 1440px;
 	max-width: 100%;
 	margin: 0 auto;
+	padding: 0 var(--indent);
 
 }
 
@@ -25,8 +26,6 @@
 
 	:root {
 
-		--margin: 72px;
-		--space: 48px;
 
 	}
 
@@ -45,7 +44,6 @@
 	.center {
 
 		width: 768px;
-		padding: 0 var(--indent);
 
 	}
 
@@ -55,10 +53,8 @@
 
 	:root {
 
-		--margin: 60px;
 		--gap: 20px;
 		--indent: 20px;
-		--space: 36px;
 
 	}
 
@@ -87,8 +83,6 @@
 
 	:root {
 
-		--margin: 40px;
-		--space: 30px;
 		--indent: 10px;
 
 	}

@@ -10,12 +10,10 @@
 	--border: rgba(255, 255, 255, .1);
 	--transitionDefault: 0s;
 
-	--margin: 96px;
-	--space: 60px;
+	--margin: 44px;
+	--space: 36px;
 	--gap: 24px;
-	--indent: 32px;
-
-	--vh: 100vh;
+	--indent: 24px;
 
 }
 
