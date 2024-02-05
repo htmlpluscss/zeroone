@@ -2,6 +2,18 @@
 
 	margin-bottom: var(--indent);
 
+	@media $desktop {
+
+		.box::before {
+
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1392' height='624' fill='none' viewBox='0 0 1392 624'%3E%3Cg filter='url(%23a)'%3E%3Cg clip-path='url(%23b)'%3E%3Cpath fill='%23fff' fill-opacity='.02' d='M0 0h1392v624H0z'/%3E%3Cg filter='url(%23c)' opacity='.24'%3E%3Cpath fill='url(%23d)' d='M1009.13 452.98c129.54 44.35 147.34 143.7 140.05 187.82-55.69 201.54-141.39 143.28-257.1 190.6C776.36 878.72 605.85 503.56 622.1 369.7c16.26-133.84 125.26-145.73 174.35-62.74 49.1 82.99 50.75 90.57 212.67 146Z'/%3E%3C/g%3E%3C/g%3E%3Cpath stroke='url(%23e)' stroke-opacity='.2' d='M.5.5h1391v623H.5z'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='d' x1='680.27' x2='214.1' y1='-85.56' y2='294.15' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.01' stop-color='%23FF6B22'/%3E%3Cstop offset='1' stop-color='%23FD810F'/%3E%3Cstop offset='1' stop-color='%23FF7E06'/%3E%3C/linearGradient%3E%3ClinearGradient id='e' x1='149.12' x2='924.3' y1='-911.13' y2='658.87' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23fff'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'/%3E%3C/linearGradient%3E%3Cfilter id='a' width='1424' height='656' x='-16' y='-16' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeGaussianBlur in='BackgroundImageFix' stdDeviation='8'/%3E%3CfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_417_4509'/%3E%3CfeBlend in='SourceGraphic' in2='effect1_backgroundBlur_417_4509' result='shape'/%3E%3C/filter%3E%3Cfilter id='c' width='1029.54' height='1080.9' x='371.03' y='4.6' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_417_4509' stdDeviation='125'/%3E%3C/filter%3E%3CclipPath id='b'%3E%3Cpath fill='%23fff' d='M0 0h1392v624H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+			background-position: bottom;
+			background-size: cover;
+
+		}
+
+	}
+
 	&__title {
 
 		text-align: center;
@@ -11,16 +23,49 @@
 
 	&__steps {
 
-		display: flex;
-		gap: 68px;
-		margin: 28px;
+		@media $desktop {
+
+			display: flex;
+			justify-content: space-between;
+			margin: 28px;
+			gap: 20px;
+
+		}
 
 	}
 
 	&__item {
 
-		display: flex;
-		flex-direction: column;
+		@media $desktop {
+
+			display: flex;
+			flex-direction: column;
+			width: 390px;
+
+		}
+
+		@media $lgWidth {
+
+			width: 360px;
+
+		}
+
+		@media $mdWidth {
+
+			width: 700px;
+			margin: auto;
+			display: flex;
+			gap: 36px;
+			margin-bottom: 36px;
+			align-items: center;
+
+			&:nth-child(2n+1) {
+
+				flex-direction: row-reverse;
+
+			}
+
+		}
 
 	}
 
@@ -33,8 +78,6 @@
 
 	&__text {
 
-		font-size: 20px;
-		line-height: 28px;
 		opacity: 0.5;
 		margin-bottom: 32px;
 
@@ -43,6 +86,20 @@
 	&__img {
 
 		margin-top: auto;
+
+		@media $mdWidth {
+
+			width: 308px;
+			flex-shrink: 0;
+
+		}
+
+		img {
+
+			width: 100%;
+			height: auto;
+
+		}
 
 	}
 

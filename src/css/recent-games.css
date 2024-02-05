@@ -14,12 +14,28 @@
 
 	}
 
+	&-data {
+
+		@media $desktop {
+
+			display: none;
+
+		}
+
+	}
+
 	&-table {
 
 		width: 100%;
 		border: 0;
 		border-collapse: separate;
 		border-spacing: 0 12px;
+
+		@media $mdWidth {
+
+			display: none;
+
+		}
 
 		thead {
 

@@ -34,7 +34,7 @@
 
 	});
 
-	const modalShow = (selector,title,btn,subject,object) => {
+	const modalShow = (selector) => {
 
 		if(!activeModal){
 
@@ -43,30 +43,6 @@
 		}
 
 		activeModal = modal.querySelector('.modal__item--' + selector);
-
-		if ( activeModal.querySelector('.form__title') ) {
-
-			activeModal.querySelector('.form__title').innerHTML = title;
-
-		}
-
-		if ( activeModal.querySelector('.form__submit') ) {
-
-			activeModal.querySelector('.form__submit').textContent = btn;
-
-		}
-
-		if ( activeModal.elements && activeModal.elements.subject ) {
-
-			activeModal.elements.subject.value = subject ? subject : '';
-
-		}
-
-		if ( activeModal.elements && activeModal.elements.object ) {
-
-			activeModal.elements.object.value = object ? object : '';
-
-		}
 
 		[...items].forEach( el => el.classList.toggle('visuallyhidden', el !== activeModal) );
 
@@ -102,13 +78,7 @@
 
 			if (target.hasAttribute('data-modal')) {
 
-				modalShow(
-					target.getAttribute('data-modal'),
-					target.getAttribute('data-title'),
-					target.getAttribute('data-btn'),
-					target.getAttribute('data-subject'),
-					target.getAttribute('data-object')
-				);
+				modalShow(target.getAttribute('data-modal'));
 
 			}
 

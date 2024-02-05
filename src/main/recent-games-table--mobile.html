@@ -1,0 +1,96 @@
+								<table class="recent-games-data">
+
+									<thead>
+
+										<th>
+											Игрок
+										</th>
+
+										<th>
+											Дата
+										</th>
+
+										<th>
+											Ставка
+										</th>
+
+										<th>
+											<span class="color-green">
+												Коэффициент
+											</span>
+										</th>
+
+										<th>
+											Сумма выплаты
+										</th>
+
+									</thead>
+
+									<tbody>
+
+{% for tr in range(1,7) %}
+
+										<tr>
+
+											<td>
+
+												<div class="recent-games-table__user">
+
+													<picture>
+
+														<source srcset="/img/recent-games/user.webp 1x, /img/recent-games/user@2x.webp 2x" type="image/webp">
+														<source srcset="/img/recent-games/user.png 1x, /img/recent-games/user@2x.png 2x">
+
+														<img src="/img/recent-games/user.png" width="44" height="44" alt="Rufus MC" loading="lazy">
+
+													</picture>
+
+													Rufus MC
+
+												</div>
+
+											</td>
+
+											<td>
+												16.12.23 15:34
+											</td>
+
+											<td>
+												1.00 ETH
+											</td>
+
+											<td>
+
+												<div class="recent-games-table__rate">
+													<span>2.03х</span>
+												</div>
+
+											</td>
+
+											<td>
+												2.00 ETH
+											</td>
+
+										</tr>
+
+{% endfor %}
+
+									</tbody>
+
+									<tfoot>
+
+										<tr>
+
+											<td colspan="5">
+
+												<button class="btn btn--grey" type="button">
+													Load more
+												</button>
+
+											</td>
+
+										</tr>
+
+									</tfoot>
+
+								</table>

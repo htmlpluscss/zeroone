@@ -13,9 +13,19 @@
 
 	&__box {
 
-		display: flex;
-		justify-content: space-between;
-		padding: 16px;
+		@media $desktop {
+
+			display: flex;
+			justify-content: space-between;
+			padding: 16px;
+
+		}
+
+		@media $mdWidth {
+
+			padding: 36px 24px;
+
+		}
 
 	}
 
@@ -26,11 +36,36 @@
 		flex-direction: column;
 		margin: 24px 28px;
 
+		@media $mdWidth {
+
+			text-align: center;
+			margin: auto;
+
+		}
+
 	}
 
 	&__form {
 
 		width: 524px;
+
+		@media $lgWidth {
+
+			width: 480px;
+
+		}
+
+		@media $mdWidth {
+
+			width: auto;
+			.form__fieldset {
+
+				width: 556px;
+				margin: auto;
+
+			}
+
+		}
 
 	}
 
@@ -49,6 +84,12 @@
 		margin: 40px 0;
 		display: flex;
 		gap: 16px;
+
+		@media $mdWidth {
+
+			justify-content: center;
+
+		}
 
 		li {
 
@@ -70,6 +111,12 @@
 		align-items: center;
 		display: flex;
 		gap: 16px;
+
+		@media $mdWidth {
+
+			display: none;
+
+		}
 
 		&-avatar {
 

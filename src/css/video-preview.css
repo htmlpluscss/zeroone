@@ -24,6 +24,13 @@
 		position: relative;
 		margin: 40px 28px 30px;
 
+		img {
+
+			width: 100%;
+			height: auto;
+
+		}
+
 		iframe {
 
 			position: absolute;

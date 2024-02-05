@@ -1,64 +1,87 @@
 				<form action="/form/create.php" class="form-create form-create--2 form">
 
-					<p class="form-create__title h4">
-						Поставь на победу
-					</p>
+					<div class="form__fieldset">
 
-					<div class="form-create__inputbox">
-
-						<label for="form-create-email-2" class="form-create__label">
-							E-mail
-						</label>
-
-						<input class="input" name="email" placeholder="Введите данные" required="required" id="form-create-email-2" type="email">
-
-					</div>
-
-					<div class="form-create__inputbox">
-
-						<label for="form-create-telegram" class="form-create__label">
-							Telegram
-						</label>
-
-						<input class="input" name="telegram" placeholder="Введите данные" required="required" id="form-create-telegram" value="@">
-
-					</div>
-
-					<div class="form-create__double">
+						<p class="form-create__title h4">
+							Поставь на победу
+						</p>
 
 						<div class="form-create__inputbox">
 
-							<label for="form-create-currency" class="form-create__label">
-								Валюта для оплаты
+							<label for="form-create-email-2" class="form__label">
+								E-mail
 							</label>
 
-							<input class="input" name="currency" id="form-create-currency" value="ETH">
+							<input class="input" name="email" placeholder="Введите данные" required="required" id="form-create-email-2" type="email">
 
 						</div>
 
 						<div class="form-create__inputbox">
 
-							<label for="form-create-game" class="form-create__label">
-								Выберите игру
+							<label for="form-create-telegram" class="form__label">
+								Telegram
 							</label>
 
-							<input class="input" name="game" id="form-create-game" value="Dota">
+							<input class="input" name="telegram" placeholder="Введите данные" required="required" id="form-create-telegram" value="@">
 
 						</div>
 
+						<div class="form-create__double">
+
+							<div class="form-create__inputbox">
+
+								<label for="form-create-currency" class="form__label">
+									Валюта для оплаты
+								</label>
+
+								<div class="select">
+
+									<select name="currency" id="form-create-currency">
+
+										<option value="BTC">BTC</option>
+										<option value="ETH" selected="selected">ETH</option>
+										<option value="USDT">USDT</option>
+
+									</select>
+
+								</div>
+
+							</div>
+
+							<div class="form-create__inputbox">
+
+								<label for="form-create-game" class="form__label">
+									Выберите игру
+								</label>
+
+								<div class="select">
+
+									<select name="game" id="form-create-game">
+
+										<option value="Dota">Dota</option>
+										<option value="CS">Counter-Strike</option>
+										<option value="Hearthstone">Hearthstone</option>
+
+									</select>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="form-create__foot">
+
+							<button class="btn btn--orange form__submit">
+								Создать аккаунт
+							</button>
+
+						</div>
+
+						<p class="form-create__alt">
+							Нажимая на кнопку “Создать аккаунт” я даю согласие на <a href="/" target="_blank">обработку персональных данных</a>
+						</p>
+
 					</div>
-
-					<div class="form-create__foot">
-
-						<button class="btn btn--orange form__submit">
-							Создать аккаунт
-						</button>
-
-					</div>
-
-					<p class="form-create__alt">
-						Нажимая на кнопку “Создать аккаунт” я даю согласие <br>
-						на <a href="/" target="_blank">обработку персональных данных</a>
-					</p>
 
 				</form>

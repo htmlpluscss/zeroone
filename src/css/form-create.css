@@ -1,3 +1,66 @@
+
+.form {
+
+	&__title {
+
+		text-align: center;
+		margin: 24px 0;
+
+	}
+
+	&__inputbox {
+
+		& + & {
+
+			margin-top: 24px;
+
+		}
+
+	}
+
+	&__label {
+
+		display: block;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 20px;
+		letter-spacing: 0.01em;
+		margin: 4px 0;
+
+	}
+
+	&__recovery {
+
+		margin: 10px 0;
+		display: flex;
+		justify-content: flex-end;
+
+		.button {
+
+			color: var(--orange);
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 20px;
+
+		}
+
+	}
+
+	&__foot {
+
+		margin-top: 32px;
+
+		.btn {
+
+			width: 100%;
+			margin-top: 24px;
+
+		}
+
+	}
+
+}
+
 .form-create {
 
 	padding: 40px 60px;
@@ -6,6 +69,12 @@
 	border-image-source: var(--whiteGrad);
 	background-image: var(--whiteGrad);
 	background-color: rgba(255, 255, 255, 0.04);
+
+	@media $lgWidth {
+
+		padding: 40px;
+
+	}
 
 	&__title {
 
@@ -31,17 +100,7 @@
 	&__double &__inputbox {
 
 		margin: 0;
-
-	}
-
-	&__label {
-
-		display: block;
-		margin-bottom: 4px;
-		font-size: 14px;
-		font-weight: 500;
-		line-height: 20px;
-		letter-spacing: 0.01em;
+		flex-basis: 50%;
 
 	}
 

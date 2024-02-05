@@ -30,6 +30,12 @@
 
 	&__menu {
 
+		@media $mdWidth {
+
+			display: none;
+
+		}
+
 		order: 3;
 
 		ul {

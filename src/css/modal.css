@@ -7,11 +7,11 @@
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	padding: 60px 20px;
+	padding: 24px;
 
 	@media $xsWidth {
 
-		padding: 40px 10px;
+		padding: 0;
 
 	}
 
@@ -20,37 +20,36 @@
 		position: relative;
 		max-width: 100%;
 
+		.box__inner {
+
+			padding: 40px;
+
+		}
+
 	}
 
 	&__item {
 
 		max-width: 100%;
-		width: 440px;
+		width: 480px;
 		position: relative;
-		padding: 48px 60px;
-		background-color: var(--milk);
-
-		@media $smWidth {
-
-			padding: 20px;
-			width: 360px;
-
-		}
 
 	}
 
 	&__close-btn {
 
 		position: absolute;
-		top: 12px;
-		right: 12px;
-		color: var(--sand);
+		top: 20px;
+		right: 20px;
+		padding: 8px;
+		border-radius: 8px;
+		background-color: rgba( 255, 255, 255, .06);
 
 		@media $desktop {
 
 			&:hover {
 
-				color: var(--dark);
+				background-color: rgba( 255, 255, 255, .12);
 
 			}
 
@@ -87,10 +86,48 @@
 			bottom: 0;
 			content: '';
 			z-index: 9;
-			opacity: .7;
-			background-color: var(--color);
+			opacity: .9;
+			background-color: var(--bg);
 
 		}
+
+	}
+
+}
+
+.modal-done {
+
+	text-align: center;
+
+	&__ico {
+
+		display: flex;
+		justify-content: center;
+		margin: 32px 0;
+
+		svg {
+
+			background-color: #44C98A;
+			border-radius: 24px;
+			box-shadow: 0px 4px 12px 0px #44C98A66;
+
+		}
+
+	}
+
+	&__title {
+
+		font-size: 16px;
+		line-height: 32px;
+		margin: 12px 0;
+
+	}
+
+	&__message {
+
+		font-size: 16px;
+		line-height: 24px;
+		opacity: .5;
 
 	}
 

@@ -41,7 +41,7 @@
 						const formData = new FormData(form),
 							  btn = form.querySelector('.form__submit');
 
-						formData.append('recaptcha_response', token);
+//						formData.append('recaptcha_response', token);
 
 						btn.disabled = true;
 

@@ -2,86 +2,79 @@
 
 		<div class="modal__box">
 
-			<form action="/form/login.php" class="modal__item modal__item--login form">
+			<form action="/form/login.php" class="modal__item modal__item--login form box">
 
-				<h3 class="form__title h4">
-					Войти
-				</h3>
+				<div class="box__inner">
 
-				<div class="form__inputbox">
-
-					<label for="modal-login-name" class="form__label">
-						Логин
-					</label>
-
-					<input class="input" name="name" placeholder="Введите данные" required="required" id="modal-login-name">
-
-				</div>
-
-				<div class="form__inputbox">
-
-					<label for="modal-login-password" class="form__label">
-						Пароль
-					</label>
-
-					<input class="input" name="password" placeholder="Введите данные" required="required" id="modal-login-password" type="password">
-
-				</div>
-
-				<div class="form__recovery">
-
-					<button class="button" type="button" data-modal="recovery">
-						Забыл пароль
-					</button>
-
-				</div>
-
-				<div class="form__foot">
-
-					<button class="btn btn--orange form__submit">
+					<h3 class="form__title h4">
 						Войти
-					</button>
+					</h3>
 
-					<button class="btn btn--gray" type="button" data-modal="reg">
-						Регистрация
-					</button>
+					<div class="form__inputbox">
+
+						<label for="modal-login-name" class="form__label">
+							Логин
+						</label>
+
+						<input class="input" name="name" placeholder="Введите данные" required="required" id="modal-login-name">
+
+					</div>
+
+					<div class="form__inputbox">
+
+						<label for="modal-login-password" class="form__label">
+							Пароль
+						</label>
+
+						<input class="input" name="password" placeholder="Введите данные" required="required" id="modal-login-password" type="password">
+
+					</div>
+
+					<div class="form__recovery">
+
+						<button class="button" type="button" data-modal="recovery">
+							Забыл пароль
+						</button>
+
+					</div>
+
+					<div class="form__foot">
+
+						<button class="btn btn--orange form__submit">
+							Войти
+						</button>
+
+						<button class="btn btn--grey" type="button" data-modal="reg">
+							Регистрация
+						</button>
+
+					</div>
 
 				</div>
 
 			</form>
 
-			<aside class="modal__item modal__item--done">
+			<aside class="modal__item modal__item--done box">
 
-				<div class="modal-done">
+				<div class="box__inner">
 
-					<div class="modal-done__ico">
+					<div class="modal-done">
 
-						<svg width="68" height="68" viewBox="0 0 68 68">
-							<path stroke="#161616" stroke-linecap="round" stroke-width="4" d="m25.5 28.33 10.6 7.95a1 1 0 0 0 1.34-.14l19.23-21.97"/>
-							<path stroke="#9E9C94" stroke-linecap="round" stroke-width="4" d="M59.5 34A25.5 25.5 0 1 1 40.6 9.37"/>
-						</svg>
+						<div class="modal-done__ico">
 
-						<svg class="hide" width="68" height="68" viewBox="0 0 68 68">
-							<circle cx="34" cy="34" r="26" stroke="#9E9C94" stroke-width="4"/>
-							<rect x="32" y="20" width="4" height="20" rx="2" fill="#161616"/>
-							<rect x="32" y="44" width="4" height="4" rx="2" fill="#161616"/>
-						</svg>
+							<svg width="72" height="72" viewBox="0 0 72 72">
+								<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m47.25 29-14 14-7-7"/>
+							</svg>
 
-					</div>
+						</div>
 
-					<div class="modal-done__title h3">
+						<div class="modal-done__title h6">
+							Ваша заявка отправлена!
+						</div>
 
-					</div>
-
-					<div class="modal-done__message">
-
-					</div>
-
-					<div class="modal-done__btn">
-
-						<button type="button" class="modal__close btn btn--dark">
-							{% if lang === "en" %}Close{% else %}Закрыть{% endif %}
-						</button>
+						<div class="modal-done__message">
+							Спасибо, что решили воспользоваться нашим сервисом! В ближайшее время с вами свяжется наш менеджер.
+						</div>
 
 					</div>
 

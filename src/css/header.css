@@ -19,6 +19,12 @@
 
 	&__menu {
 
+		@media $mdWidth {
+
+			display: none;
+
+		}
+
 		ul {
 
 			display: flex;

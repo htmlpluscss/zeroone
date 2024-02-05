@@ -41,6 +41,13 @@ body {
 /* background-image: url(/css/1.png); */
 background-position: top;
 
+	@media $mdWidth {
+
+		font-size: 16px;
+		line-height: 1.5;
+
+	}
+
 }
 
 a {
@@ -100,6 +107,8 @@ hr {
 
 	@media $mdWidth {
 
+		font-size: 32px;
+		line-height: 40px;
 
 	}
 
@@ -116,6 +125,12 @@ hr {
 	font-weight: 500;
 	font-size: 36px;
 	line-height: 44px;
+
+	@media $lgWidth {
+
+		font-size: 32px;
+
+	}
 
 }
 
@@ -134,6 +149,13 @@ hr {
 	font-weight: 500;
 	font-size: 28px;
 	line-height: 36px;
+
+	@media $mdWidth {
+
+		font-size: 20px;
+		line-height: 32px;
+
+	}
 
 }
 

@@ -22,6 +22,10 @@
 
 }
 
+@media $lgWidth {
+
+}
+
 @media $mdWidth {
 
 	:root {
@@ -38,12 +42,6 @@
 	.visible-md {
 
 		display: block;
-
-	}
-
-	.center {
-
-		width: 768px;
 
 	}
 
