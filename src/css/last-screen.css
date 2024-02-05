@@ -15,15 +15,16 @@
 
 		display: flex;
 		justify-content: space-between;
-		padding: 20px 20px 0 var(--margin);
+		padding: 16px;
 
 	}
 
 	&__content {
 
-		width: 700px;
+		width: 680px;
 		display: flex;
 		flex-direction: column;
+		margin: 24px 28px;
 
 	}
 
@@ -35,8 +36,6 @@
 
 	&__title {
 
-		margin: var(--gap) 0;
-
 		b {
 
 			font-weight: 800;
@@ -47,13 +46,13 @@
 
 	&__games {
 
-		margin: 20px 0;
+		margin: 40px 0;
 		display: flex;
 		gap: 16px;
 
 		li {
 
-			padding: 10px;
+			padding: 9px;
 			border-radius: 16px;
 
 			border: 1px solid;
@@ -76,15 +75,22 @@
 
 			display: flex;
 			flex-direction: row-reverse;
+			padding-left: 16px;
 
 			li {
 
-				margin-left: -16px;
+				margin-left: -18px;
 				border-radius: 50%;
 				overflow: hidden;
 				border: 4px solid #202022;
 
 			}
+
+		}
+
+		&-count {
+
+			font-weight: 700;
 
 		}
 

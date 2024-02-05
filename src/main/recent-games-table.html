@@ -28,7 +28,7 @@
 
 									<tbody>
 
-{% for tr in range(1,5) %}
+{% for tr in range(1,7) %}
 
 										<tr>
 
@@ -36,7 +36,14 @@
 
 												<div class="recent-games-table__user">
 
-													<img src="/img/recent-games/user.png" srcset="/img/recent-games/user@2x.png 2x" width="44" height="44" loading="lazy" alt="Rufus MC">
+													<picture>
+
+														<source srcset="/img/recent-games/user.webp 1x, /img/recent-games/user@2x.webp 2x" type="image/webp">
+														<source srcset="/img/recent-games/user.png 1x, /img/recent-games/user@2x.png 2x">
+
+														<img src="/img/recent-games/user.png" width="44" height="44" alt="Rufus MC" loading="lazy">
+
+													</picture>
 
 													Rufus MC
 
@@ -54,7 +61,7 @@
 
 											<td>
 
-												<div class="recent-games-table__date">
+												<div class="recent-games-table__rate">
 													<span>2.03х</span>
 												</div>
 

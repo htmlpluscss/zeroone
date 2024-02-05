@@ -9,7 +9,7 @@
 
 		&-item {
 
-			flex-grow: 1;
+			flex-basis: 50%;
 			border-radius: 12px 12px 0 0;
 
 			&.is-active {
@@ -41,7 +41,7 @@
 
 		border-radius: 12px;
 		background-color: rgba( 255, 255, 255, .02);
-		padding: 20px;
+		padding: 8px 20px;
 
 		&:first-child.is-active {
 
@@ -62,6 +62,5 @@
 		display: none;
 
 	}
-
 
 }

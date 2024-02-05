@@ -20,6 +20,20 @@
 
 	}
 
+	&__double {
+
+		display: flex;
+		gap: 20px;
+		margin: 20px 0;
+
+	}
+
+	&__double &__inputbox {
+
+		margin: 0;
+
+	}
+
 	&__label {
 
 		display: block;
@@ -78,6 +92,24 @@
 			height: 56px;
 
 		}
+
+	}
+
+	&--2 {
+
+		padding: 34px 50px 16px;
+
+	}
+
+	&--2 &__title {
+
+		margin-bottom: 28px;
+
+	}
+
+	&--2 &__foot {
+
+		margin: 28px 0 20px;
 
 	}
 

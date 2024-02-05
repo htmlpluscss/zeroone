@@ -4,7 +4,7 @@
 
 	&__box {
 
-		margin: 20px;
+		margin: 28px;
 
 	}
 
@@ -19,7 +19,7 @@
 		width: 100%;
 		border: 0;
 		border-collapse: separate;
-		border-spacing: 0 10px;
+		border-spacing: 0 12px;
 
 		thead {
 
@@ -30,10 +30,14 @@
 				font-weight: 400;
 				text-transform: uppercase;
 				line-height: 16px;
+				width: 180px;
+				padding: 8px 0;
 
 				&:first-child {
 
 					text-align: left;
+					padding-left: 16px;
+					width: auto;
 
 				}
 
@@ -77,6 +81,7 @@
 				background-color: rgba( 255, 255, 255, .02);
 				font-size: 16px;
 				line-height: 24px;
+				margin-top: 2px;
 
 			}
 
@@ -100,7 +105,7 @@
 
 		}
 
-		&__date {
+		&__rate {
 
 			display: flex;
 			justify-content: center;
@@ -108,7 +113,9 @@
 			span {
 
 				padding: 4px 16px;
+				font-size: 16px;
 				border-radius: 100px;
+				text-transform: uppercase;
 				color: var(--green);
 				background-color: rgba(68, 201, 138, 0.08);
 

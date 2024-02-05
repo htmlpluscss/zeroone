@@ -1,4 +1,4 @@
-				<form action="/form/create.php" class="form-create form">
+				<form action="/form/create.php" class="form-create form-create--2 form">
 
 					<p class="form-create__title h4">
 						Поставь на победу
@@ -23,10 +23,31 @@
 						<input class="input" name="telegram" placeholder="Введите данные" required="required" id="form-create-telegram" value="@">
 
 					</div>
-Валюта для оплаты
-ETH
-Выберите игру
-Dota
+
+					<div class="form-create__double">
+
+						<div class="form-create__inputbox">
+
+							<label for="form-create-currency" class="form-create__label">
+								Валюта для оплаты
+							</label>
+
+							<input class="input" name="currency" id="form-create-currency" value="ETH">
+
+						</div>
+
+						<div class="form-create__inputbox">
+
+							<label for="form-create-game" class="form-create__label">
+								Выберите игру
+							</label>
+
+							<input class="input" name="game" id="form-create-game" value="Dota">
+
+						</div>
+
+					</div>
+
 					<div class="form-create__foot">
 
 						<button class="btn btn--orange form__submit">
