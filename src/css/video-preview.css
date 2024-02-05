@@ -20,6 +20,12 @@
 
 		margin: 40px 28px 30px;
 
+		@media $mdWidth {
+
+			margin: 40px 10px 10px;
+
+		}
+
 		video {
 
 			width: 100%;
@@ -35,6 +41,12 @@
 		border-radius: 20px;
 		position: relative;
 		margin: 40px 28px 30px;
+
+		@media $mdWidth {
+
+			margin: 40px 10px 10px;
+
+		}
 
 		img {
 

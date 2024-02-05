@@ -9,12 +9,31 @@
 		align-items: center;
 		gap: 24px;
 
+		@media $mdWidth {
+
+			flex-wrap: wrap;
+			gap: 12px;
+			padding: 0 4px;
+
+		}
+
 	}
 
 	&__logo {
 
 		order: 1;
 		padding-left: 8px;
+
+		@media $mdWidth {
+
+			img {
+
+				width: auto;
+				height: 16px;
+
+			}
+
+		}
 
 	}
 
@@ -26,17 +45,41 @@
 		opacity: .32;
 		text-transform: uppercase;
 
+		@media $mdWidth {
+
+			order: 4;
+
+		}
+
+	}
+
+	hr {
+
+		order: 3;
+		border: 0;
+		background-color: #fff;
+		height: 1px;
+		opacity: .05;
+		width: 100%;
+
+		@media $desktop {
+
+			display: none;
+
+		}
+
 	}
 
 	&__menu {
 
 		@media $mdWidth {
 
-			display: none;
+			order: 5;
+			margin-left: auto;
 
 		}
 
-		order: 3;
+		order: 4;
 
 		ul {
 
@@ -66,8 +109,14 @@
 
 	&__social {
 
-		order: 4;
+		order: 5;
 		margin-left: auto;
+
+		@media $mdWidth {
+
+			order: 2;
+
+		}
 
 		a:hover svg {
 

@@ -22,6 +22,7 @@
 				background-color: var(--bg);
 				background-image: url(/img/first-screen/bg.png);
 				background-size: cover;
+				background-repeat: no-repeat;
 
 			}
 
@@ -138,6 +139,12 @@
 
 				width: 556px;
 				margin: auto;
+
+			}
+
+			.form-create__title {
+
+				font-size: 32px;
 
 			}
 

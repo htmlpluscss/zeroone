@@ -15,6 +15,17 @@
 		flex-grow: 1;
 		padding: 0 8px;
 
+		@media $mdWidth {
+
+			img {
+
+				width: auto;
+				height: 16px;
+
+			}
+
+		}
+
 	}
 
 	&__menu {
@@ -62,6 +73,18 @@
 	&__user {
 
 		margin-left: 50px;
+
+		@media $mdWidth {
+
+			.btn {
+
+				font-size: 12px;
+				line-height: 16px;
+				padding: 10px 20px;
+
+			}
+
+		}
 
 	}
 

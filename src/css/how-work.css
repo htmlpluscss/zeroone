@@ -52,7 +52,7 @@
 
 		@media $mdWidth {
 
-			width: 700px;
+			width: 656px;
 			margin: auto;
 			display: flex;
 			gap: 36px;

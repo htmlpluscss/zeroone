@@ -6,6 +6,13 @@
 
 			background-image: url(/img/last-screen/bg.png);
 			background-size: cover;
+			background-repeat: no-repeat;
+
+			@media $mdWidth {
+
+				background-image: url(/img/last-screen/bg-tablet.png);
+
+			}
 
 		}
 

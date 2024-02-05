@@ -1,96 +1,80 @@
-								<table class="recent-games-data">
+							<div class="recent-games-data">
 
-									<thead>
+{% for tr in range(1,4) %}
 
-										<th>
-											Игрок
-										</th>
+								<div class="recent-games-data__item">
 
-										<th>
-											Дата
-										</th>
+									<div class="recent-games-data__user">
 
-										<th>
-											Ставка
-										</th>
+										<picture>
 
-										<th>
-											<span class="color-green">
-												Коэффициент
-											</span>
-										</th>
+											<source srcset="/img/recent-games/user.webp 1x, /img/recent-games/user@2x.webp 2x" type="image/webp">
+											<source srcset="/img/recent-games/user.png 1x, /img/recent-games/user@2x.png 2x">
 
-										<th>
-											Сумма выплаты
-										</th>
+											<img src="/img/recent-games/user.png" width="40" height="40" alt="Rufus MC" loading="lazy">
 
-									</thead>
+										</picture>
 
-									<tbody>
+										Rufus MC
 
-{% for tr in range(1,7) %}
+									</div>
 
-										<tr>
+									<div class="recent-games-data__table">
 
-											<td>
+										<dl>
 
-												<div class="recent-games-table__user">
+											<dt>
+												Дата
+											</dt>
 
-													<picture>
-
-														<source srcset="/img/recent-games/user.webp 1x, /img/recent-games/user@2x.webp 2x" type="image/webp">
-														<source srcset="/img/recent-games/user.png 1x, /img/recent-games/user@2x.png 2x">
-
-														<img src="/img/recent-games/user.png" width="44" height="44" alt="Rufus MC" loading="lazy">
-
-													</picture>
-
-													Rufus MC
-
-												</div>
-
-											</td>
-
-											<td>
+											<dd>
 												16.12.23 15:34
-											</td>
+											</dd>
 
-											<td>
+											<dt>
+												Ставка
+											</dt>
+
+											<dd>
 												1.00 ETH
-											</td>
+											</dd>
 
-											<td>
+										</dl>
 
-												<div class="recent-games-table__rate">
+										<dl>
+
+											<dt>
+												Коэффициент
+											</dt>
+
+											<dd>
+												<div class="recent-games-data__rate">
 													<span>2.03х</span>
 												</div>
+											</dd>
 
-											</td>
+											<dt>
+												Сумма выплаты
+											</dt>
 
-											<td>
+											<dd>
 												2.00 ETH
-											</td>
+											</dd>
 
-										</tr>
+										</dl>
+
+									</div>
+
+								</div>
 
 {% endfor %}
 
-									</tbody>
+								<div class="recent-games-data__foot">
 
-									<tfoot>
+									<button class="btn btn--grey" type="button">
+										Load more
+									</button>
 
-										<tr>
+								</div>
 
-											<td colspan="5">
-
-												<button class="btn btn--grey" type="button">
-													Load more
-												</button>
-
-											</td>
-
-										</tr>
-
-									</tfoot>
-
-								</table>
+							</div>

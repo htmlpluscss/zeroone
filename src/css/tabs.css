@@ -12,6 +12,13 @@
 			flex-basis: 50%;
 			border-radius: 12px 12px 0 0;
 
+			@media $mdWidth {
+
+				flex-grow: 1;
+				flex-basis: auto;
+
+			}
+
 			&.is-active {
 
 				background-color: rgba( 255, 255, 255, .02);
@@ -35,6 +42,12 @@
 		gap: 16px;
 		padding: 12px 20px;
 
+		@media $mdWidth {
+
+			padding: 10px 16px;
+
+		}
+
 	}
 
 	&__item {
@@ -42,6 +55,12 @@
 		border-radius: 12px;
 		background-color: rgba( 255, 255, 255, .02);
 		padding: 8px 20px;
+
+		@media $mdWidth {
+
+			padding: 16px;
+
+		}
 
 		&:first-child.is-active {
 
