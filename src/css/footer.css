@@ -17,6 +17,12 @@
 
 		}
 
+		@media $smWidth {
+
+			gap: 0;
+
+		}
+
 	}
 
 	&__logo {
@@ -51,6 +57,15 @@
 
 		}
 
+		@media $smWidth {
+
+			width: 100%;
+			margin: 0 0 4px;
+			text-align: center;
+			order: 5;
+
+		}
+
 	}
 
 	hr {
@@ -68,9 +83,17 @@
 
 		}
 
+		@media $smWidth {
+
+			margin: 16px 0 10px;
+
+		}
+
 	}
 
 	&__menu {
+
+		order: 4;
 
 		@media $mdWidth {
 
@@ -79,7 +102,15 @@
 
 		}
 
-		order: 4;
+		@media $smWidth {
+
+			width: 100%;
+			margin: 0;
+			order: 4;
+			display: flex;
+			justify-content: center;
+
+		}
 
 		ul {
 

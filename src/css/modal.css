@@ -7,13 +7,7 @@
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	padding: 24px;
-
-	@media $xsWidth {
-
-		padding: 0;
-
-	}
+	padding: var(--indent);
 
 	&__box {
 
@@ -23,6 +17,12 @@
 		.box__inner {
 
 			padding: 40px;
+
+			@media $smWidth {
+
+				padding: 24px;
+
+			}
 
 		}
 

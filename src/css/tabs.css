@@ -48,6 +48,13 @@
 
 		}
 
+		@media $smWidth {
+
+			padding: 8px 12px;
+			font-size: 0;
+
+		}
+
 	}
 
 	&__item {
@@ -59,6 +66,12 @@
 		@media $mdWidth {
 
 			padding: 16px;
+
+		}
+
+		@media $smWidth {
+
+			padding: 12px;
 
 		}
 

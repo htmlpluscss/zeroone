@@ -12,6 +12,12 @@
 
 		}
 
+		@media $smWidth {
+
+			margin: 8px;
+
+		}
+
 	}
 
 	&__title {
@@ -22,6 +28,12 @@
 
 			text-align: center;
 			margin: 20px 0;
+
+		}
+
+		@media $smWidth {
+
+			margin: 24px 0;
 
 		}
 
@@ -42,6 +54,12 @@
 			border-radius: 10px;
 			margin-bottom: 16px;
 
+			@media $smWidth {
+
+				padding: 12px;
+
+			}
+
 		}
 
 		&__user {
@@ -55,12 +73,24 @@
 			font-family: Unbounded;
 			margin-bottom: 12px;
 
+			@media $smWidth {
+
+				margin-bottom: 6px;
+
+			}
+
 		}
 
 		&__table {
 
 			display: flex;
 			gap: 16px;
+
+			@media $smWidth {
+
+				display: block;
+
+			}
 
 			dl {
 
@@ -70,15 +100,28 @@
 				border-radius: 12px;
 				overflow: hidden;
 
+				@media $smWidth {
+
+					background-color: transparent;
+					padding: 0;
+
+				}
+
 			}
 
 			dt {
 
 				font-size: 12px;
-				line-height: 16px;
+				line-height: 20px;
 				color: #7B7B7B;
 				float: left;
 				clear: both;
+
+				@media $smWidth {
+
+					padding-top: 10px;
+
+				}
 
 			}
 
@@ -89,13 +132,31 @@
 				line-height: 20px;
 				float: right;
 
+				@media $smWidth {
+
+					padding-top: 10px;
+
+				}
+
 				& + dt {
 
 					padding-top: 6px;
 
+					@media $smWidth {
+
+						padding-top: 10px;
+
+					}
+
 					& + dd {
 
 						padding-top: 6px;
+
+						@media $smWidth {
+
+							padding-top: 10px;
+
+						}
 
 					}
 
@@ -108,6 +169,8 @@
 		&__rate {
 
 			display: flex;
+			align-items: center;
+			height: 20px;
 			justify-content: center;
 
 			span {

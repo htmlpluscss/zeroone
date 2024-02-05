@@ -19,6 +19,12 @@
 		text-align: center;
 		margin: 24px 0 60px;
 
+		@media $smWidth {
+
+			margin: 18px 0 30px;
+
+		}
+
 	}
 
 	&__steps {
@@ -67,6 +73,21 @@
 
 		}
 
+		@media $smWidth {
+
+			width: auto;
+			margin: 0 8px;
+			display: block;
+			text-align: center;
+
+			& + & {
+
+				margin-top: 40px;
+
+			}
+
+		}
+
 	}
 
 	&__head {
@@ -74,12 +95,24 @@
 		margin-bottom: 20px;
 		font-weight: 800;
 
+		@media $smWidth {
+
+			margin-bottom: 14px;
+
+		}
+
 	}
 
 	&__text {
 
 		opacity: 0.5;
 		margin-bottom: 32px;
+
+		@media $smWidth {
+
+			margin-bottom: 24px;
+
+		}
 
 	}
 
@@ -91,6 +124,13 @@
 
 			width: 308px;
 			flex-shrink: 0;
+
+		}
+
+		@media $smWidth {
+
+			width: auto;
+			margin: auto;
 
 		}
 

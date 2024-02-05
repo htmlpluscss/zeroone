@@ -39,7 +39,7 @@ const w3cjs            = require('gulp-w3cjs');
 
 const site             = 'OneZero';
 //const domain           = 'palladium.ae';
-const domain           = 'pg-development.vercel.app';
+const domain           = 'zero.htmlpluscss.website';
 
 const html = (files, since = {}, folder = '') => {
 

@@ -88,6 +88,12 @@
 
 		}
 
+		@media $smWidth {
+
+			background-image: url(/img/first-screen/bg--mobile.png);
+
+		}
+
 	}
 
 	&__stat-top {
@@ -116,6 +122,14 @@
 		@media $mdWidth {
 
 			margin: auto;
+			height: 314px;
+			padding: 0 16px;
+
+		}
+
+		@media $smWidth {
+
+			width: auto;
 
 		}
 
@@ -139,12 +153,24 @@
 
 				width: 556px;
 				margin: auto;
+				max-width: 100%;
 
 			}
 
 			.form-create__title {
 
 				font-size: 32px;
+
+			}
+
+		}
+
+		@media $smWidth {
+
+			.form-create__title {
+
+				font-size: 24px;
+				line-height: 32px;
 
 			}
 
@@ -159,6 +185,12 @@
 		@media $mdWidth {
 
 			text-align: center;
+
+		}
+
+		@media $smWidth {
+
+			margin-top: 40px;
 
 		}
 
@@ -178,6 +210,12 @@
 		@media $mdWidth {
 
 			text-align: center;
+
+		}
+
+		@media $smWidth {
+
+			margin: 16px 0 40px;
 
 		}
 

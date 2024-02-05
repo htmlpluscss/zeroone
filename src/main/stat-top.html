@@ -4,21 +4,25 @@
 	{
 		logo : "dota",
 		name : "Defense Of The Ancients (Dota)",
+		short: "Dota",
 		rate : "2.03"
 	},
 	{
 		logo : "cs",
 		name : "Counter-Strike Global Offensive (CS GO)",
+		short: "CS 2 GO",
 		rate : "6.03"
 	},
 	{
 		logo : "hearthstone",
 		name : "Hearthstone",
+		short: "Hearthstone",
 		rate : "2.03"
 	},
 	{
 		logo : "dota",
 		name : "Defense of the Ancients (Dota)",
+		short: "Dota",
 		rate : "2.03"
 	}
 ]%}
@@ -46,7 +50,11 @@
 						<div class="stat-top__body">
 
 							<div class="stat-top__name in-progress">
-								{{ item.name }}
+
+								<div class="stat-top__name-value" data-short="{{ item.short }}">
+									{{ item.name }}
+								</div>
+
 							</div>
 
 							<div class="stat-top__time">

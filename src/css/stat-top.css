@@ -3,6 +3,7 @@
 	&__item {
 
 		display: flex;
+		align-items: center;
 		border-radius: 16px;
 		padding: 8px;
 		gap: 8px;
@@ -23,7 +24,14 @@
 		border-radius: 8px;
 		background-color: rgba( 255, 255, 255, .04);
 		text-align: center;
+		margin-left: auto;
 		min-width: 102px;
+
+		@media $smWidth {
+
+			min-width: 92px;
+
+		}
 
 	}
 
@@ -34,6 +42,12 @@
 		line-height: 20px;
 		margin-bottom: 2px;
 		opacity: .5;
+
+		@media $smWidth {
+
+			margin-bottom: 1px;
+
+		}
 
 	}
 
@@ -51,13 +65,31 @@
 		width: 60px;
 		flex-shrink: 0;
 
+		@media $smWidth {
+
+			width: 52px;
+
+			img {
+
+				width: 52px;
+				height: 52px;
+
+			}
+
+		}
+
 	}
 
 	&__body {
 
 		padding: 0 8px;
-		flex-grow: 1;
 		align-self: center;
+
+		@media $smWidth {
+
+			padding: 0 2px;
+
+		}
 
 	}
 
@@ -66,6 +98,8 @@
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 24px;
+		display: flex;
+		align-items: center;
 
 		&.in-progress::after {
 
@@ -75,7 +109,26 @@
 			display: inline-block;
 			border-radius: 50%;
 			background-color: var(--green);
-			margin-left: 4px;
+			margin-left: 8px;
+			flex-shrink: 0;
+
+		}
+
+		@media $smWidth {
+
+			&-value {
+
+				font-size: 0;
+				display: flex;
+
+				&::before {
+
+					content: attr(data-short);
+					font-size: 16px;
+
+				}
+
+			}
 
 		}
 
