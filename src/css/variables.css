@@ -22,3 +22,9 @@ $tablet:  (min-width: 728px) and (max-width: 1199px);
 $mdWidth: (max-width: 1199px);
 $smWidth: (max-width: 727px);
 $xsWidth: (max-width: 359px);
+
+.color-green {
+
+	color: var(--green);
+
+}

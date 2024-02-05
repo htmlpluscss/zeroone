@@ -14,6 +14,7 @@
 @import url(stat-top.css);
 @import url(form-create.css);
 @import url(recent-games.css);
+@import url(tabs.css);
 
 /*
 @import url(tailored-solutions.css);
@@ -21,7 +22,7 @@
 @import url(crypto.css);
 @import url(event.css);
 
-@import url(page-text.css);
+
 @import url(fade-in.css);
 @import url(clients.css);
  */

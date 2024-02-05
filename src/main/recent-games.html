@@ -1,4 +1,4 @@
-	<article class="first-screen">
+	<article class="recent-games">
 
 		<div class="center">
 
@@ -6,31 +6,75 @@
 
 				<div class="box__inner">
 
-					<div class="first-screen__box">
+					<div class="recent-games__box">
 
-						<div class="first-screen__content">
+						<h2 class="recent-games__title h2">
+							Последние игры
+						</h2>
 
-							<h1 class="first-screen__title h2">
-								Запускай игру › <br>
-								Побеждай своих соперников › <br>
-								<b>Забирай выигрыш!</b>
-							</h1>
+						<div class="tabs">
 
-							<p class="first-screen__text">
-								Создай аккаунт и получи <b>1 000 ₽</b> на игровой счет.
-							</p>
+							<ul class="tabs__nav">
 
-							<div class="first-screen__stat-top">
+								<li class="tabs__nav-item is-active">
 
-{% include "main/stat-top.html" %}
+									<a class="tabs__btn h6" href="#recent-games-dota">
+
+										<img src="/img/recent-games/dota.png" srcset="/img/recent-games/dota@2x.png 2x" width="32" height="32" loading="lazy" alt="Dota">
+
+										Dota
+
+									</a>
+
+								</li>
+
+								<li class="tabs__nav-item">
+
+									<a class="tabs__btn h6" href="#recent-games-cs">
+
+										<img src="/img/recent-games/cs.png" srcset="/img/recent-games/cs@2x.png 2x" width="32" height="32" loading="lazy" alt="Counter Strike">
+
+										Counter Strike
+
+									</a>
+
+								</li>
+
+								<li class="tabs__nav-item">
+
+									<a class="tabs__btn h6" href="#recent-games-hearthstone">
+
+										<img src="/img/recent-games/hearthstone.png" srcset="/img/recent-games/hearthstone@2x.png 2x" width="32" height="32" loading="lazy" alt="Hearthstone">
+
+										Hearthstone
+
+									</a>
+
+								</li>
+
+							</ul>
+
+							<div class="tabs__main">
+
+								<div class="tabs__item is-active" id="recent-games-dota">
+
+{% include "main/recent-games-table.html" %}
+
+								</div>
+
+								<div class="tabs__item" id="recent-games-cs">
+
+{% include "main/recent-games-table.html" %}
+
+								</div>
+
+								<div class="tabs__item" id="recent-games-hearthstone">
+
+{% include "main/recent-games-table.html" %}
+
+								</div>
 
 							</div>
-
-						</div>
-
-						<div class="first-screen__form">
-
-{% include "main/form.html" %}
 
 						</div>
 
