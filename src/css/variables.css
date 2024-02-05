@@ -5,6 +5,7 @@
 	--gray: #585858;
 	--orange: #FE7818;
 	--orangeGrad: linear-gradient(64.8deg, #FF6B22 18%, #FD810F 105%);
+	--whiteGrad: linear-gradient(132.24deg, rgba(255, 255, 255, 0.2) -63.87%, rgba(255, 255, 255, 0) 85.05%);
 	--bg: #1C1C1E;
 
 	--border: rgba(255, 255, 255, .1);

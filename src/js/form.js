@@ -22,12 +22,12 @@
 
 	[...forms].forEach( form => {
 
-		form.addEventListener('input', reCaptcha);
+//		form.addEventListener('input', reCaptcha);
 
 		form.addEventListener('submit', event => {
 
 			event.preventDefault();
-
+/*
 			if (typeof(grecaptcha) === 'undefined') {
 
 				alert('Error! Google reCaptcha');
@@ -37,7 +37,7 @@
 				grecaptcha.ready( () => {
 
 					grecaptcha.execute(PUBLIC_KEY).then( token => {
-
+*/
 						const formData = new FormData(form),
 							  btn = form.querySelector('.form__submit');
 
@@ -73,13 +73,13 @@
 							form.reset();
 
 						});
-
+/*
 					});
 
 				});
 
 			}
-
+*/
 		});
 
 	});

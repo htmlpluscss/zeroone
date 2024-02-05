@@ -3,10 +3,9 @@
 	padding: 40px 60px;
 	border-radius: 20px;
 	border: 1px solid;
-	border-image-source: linear-gradient(132.24deg, rgba(255, 255, 255, 0.2) -63.87%, rgba(255, 255, 255, 0) 85.05%);
-	background:
-		linear-gradient(132.24deg, rgba(255, 255, 255, 0.2) -63.87%, rgba(255, 255, 255, 0) 85.05%),
-		linear-gradient(0deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04));
+	border-image-source: var(--whiteGrad);
+	background-image: var(--whiteGrad);
+	background-color: rgba(255, 255, 255, 0.04);
 
 	&__title {
 
@@ -52,6 +51,19 @@
 		line-height: 20px;
 		margin: 20px 0;
 		opacity: .5;
+
+		a {
+
+			text-decoration: underline;
+			transition: var(--transitionDefault);
+
+			&:hover {
+
+				text-decoration-color: transparent;
+
+			}
+
+		}
 
 	}
 

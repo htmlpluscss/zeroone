@@ -126,12 +126,12 @@ gulp.task('js', () => {
 });
 
 gulp.task('serve', () => {
-
+/*
 	gulp.src([
 		'src/js/min/swiper.min.js',
 		'src/js/min/inputmask.min.js'
 	]).pipe(gulp.dest('build/js'));
-
+*/
 	server.init({
 		server: 'build',
 		files: [

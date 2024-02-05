@@ -8,21 +8,11 @@
 @import url(modal.css);
 @import url(social.css);
 
-/*@import url(swiper.css);*/
-
 @import url(first-screen.css);
 @import url(stat-top.css);
 @import url(form-create.css);
 @import url(recent-games.css);
 @import url(tabs.css);
-
-/*
-@import url(tailored-solutions.css);
 @import url(how-work.css);
-@import url(crypto.css);
-@import url(event.css);
-
-
-@import url(fade-in.css);
-@import url(clients.css);
- */
+@import url(video-preview.css);
+@import url(last-screen.css);

@@ -1,173 +1,46 @@
 .how-work {
 
-	margin: var(--margin) 0;
-
-	@media $smWidth {
-
-		margin-bottom: 0;
-
-	}
+	margin-bottom: var(--indent);
 
 	&__title {
 
-		margin-bottom: var(--gap);
-
-		@media $smWidth {
-
-			text-align: center;
-
-		}
+		text-align: center;
+		margin-bottom: 36px;
 
 	}
 
-	&__list {
+	&__steps {
 
-		border-top: 1px solid var(--line);
-		border-bottom: 1px solid var(--line);
-		counter-reset: headings 0;
-
-		@media $desktop {
-
-			flex-grow: 1;
-			display: grid;
-			align-items: flex-start;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: auto 1fr;
-			border-top: 1px solid var(--line);
-			border-bottom: 1px solid var(--line);
-			padding: 36px 0;
-			gap: 0 36px;
-			position: relative;
-
-			&::after {
-
-				position: absolute;
-				width: 1px;
-				top: 40px;
-				left: 0;
-				right: 0;
-				bottom: 40px;
-				content: '';
-				margin: auto;
-				background-color: var(--line);
-
-			}
-
-		}
-
-		@media $smWidth {
-
-			border-bottom: 0;
-
-		}
+		display: flex;
+		gap: 68px;
 
 	}
 
 	&__item {
 
-		padding: 0 36px 36px 0;
+		display: flex;
+		flex-direction: column;
 
-		@media $desktop {
+	}
 
-			&:nth-child(1) {
+	&__head {
 
-			}
+		margin-bottom: 24px;
 
-			&:nth-child(2) {
+	}
 
-				padding-top: 36px;
-				border-top: 1px solid var(--line);
+	&__text {
 
-			}
+		font-size: 20px;
+		line-height: 28px;
+		opacity: 0.5;
+		margin-bottom: 24px;
 
-			&:nth-child(3) {
+	}
 
-				grid-row-start: 1;
-				grid-row-end: 3;
-				grid-column-start: 2;
-				grid-column-end: 3;
-				padding: 0 0 0 18px;
+	&__img {
 
-			}
-
-
-		}
-
-		@media $mdWidth {
-
-			padding: 40px 0;
-
-			&:nth-child(n+2) {
-
-				border-top: 1px solid var(--line);
-
-			}
-
-		}
-
-		@media $smWidth {
-
-			padding: var(--gap) 0;
-
-			&:nth-child(3) {
-
-				padding-bottom: 0;
-
-			}
-
-		}
-
-		b {
-
-			display: block;
-			font-weight: 400;
-			padding-left: 46px;
-			position: relative;
-			font-size: 20px;
-			line-height: 36px;
-
-			&::before {
-
-				counter-increment: headings 1;
-				content: '0' counter(headings, decimal);
-				position: absolute;
-				top: 0;
-				left: 0;
-				color: var(--sand);
-
-				@media $smWidth {
-
-					display: block;
-					position: relative;
-					font-size: 16px;
-					margin-bottom: 5px;
-
-				}
-
-			}
-
-			@media $smWidth {
-
-				padding: 0;
-				line-height: 1.5;
-
-			}
-
-		}
-
-		p {
-
-			opacity: .5;
-			margin-top: var(--gap);
-
-			@media $smWidth {
-
-				font-size: 14px;
-				line-height: 20px;
-
-			}
-
-		}
+		margin-top: auto;
 
 	}
 

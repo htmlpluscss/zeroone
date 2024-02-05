@@ -1,0 +1,90 @@
+	<article class="last-screen">
+
+		<div class="center">
+
+			<div class="box">
+
+				<div class="box__inner">
+
+					<div class="last-screen__box">
+
+						<div class="last-screen__content">
+
+							<h1 class="last-screen__title h2">
+								<b>Зарабатывай</b> <br>
+								реальные деньги, <br>
+								играя в любимые игры!
+							</h1>
+
+							<ul class="last-screen__games">
+
+{% for img in ['dota','cs','hearthstone'] %}
+
+								<li>
+
+									<picture>
+
+										<source srcset="/img/games/{{ img }}.webp 1x, /img/games/{{ img }}@2x.webp 2x" type="image/webp">
+										<source srcset="/img/games/{{ img }}.jpg 1x, /img/games/{{ img }}@2x.jpg 2x">
+
+										<img src="/img/games/{{ img }}.jpg" width="60" height="60" alt="" loading="lazy">
+
+									</picture>
+
+								</li>
+
+{% endfor %}
+
+							</ul>
+
+							<div class="last-screen__users">
+
+								<ul class="last-screen__users-avatar">
+
+{% for img in range(1,5) %}
+
+									<li>
+
+										<picture>
+
+											<source srcset="/img/last-screen/{{ img }}.webp 1x, /img/last-screen/{{ img }}@2x.webp 2x" type="image/webp">
+											<source srcset="/img/last-screen/{{ img }}.jpg 1x, /img/last-screen/{{ img }}@2x.jpg 2x">
+
+											<img src="/img/last-screen/{{ img }}.jpg" width="56" height="56" alt="" loading="lazy">
+
+										</picture>
+
+									</li>
+
+{% endfor %}
+
+								</ul>
+
+								<p class="last-screen__users-count h3">
+									6 789
+								</p>
+
+								<p class="last-screen__users-text">
+									игроков уже зарабатывают <br>
+									на любимых играх!
+								</p>
+
+							</div>
+
+						</div>
+
+						<div class="last-screen__form">
+
+{% include "main/form2.html" %}
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>
