@@ -58,6 +58,7 @@
 		@media $mdWidth {
 
 			width: auto;
+
 			.form__fieldset {
 
 				width: 556px;

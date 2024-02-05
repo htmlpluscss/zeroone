@@ -1,3 +1,21 @@
+( box => {
+
+	if( box ) {
+
+		box.querySelector('.video-preview__box').addEventListener('click', () => {
+
+			box.querySelector('.video-preview__box').remove();
+
+			box.querySelector('.video-preview__video').classList.remove('hide');
+
+			box.querySelector('video').play();
+
+		});
+
+	}
+
+})(document.querySelector('.video-preview'));
+
 ( youtube => {
 
 	if( youtube.length ) {

@@ -89,6 +89,31 @@
 
 	}
 
+	&__telegram {
+
+		position: relative;
+
+		.input {
+
+			padding-left: 36px;
+
+		}
+
+		&::after {
+
+			position: absolute;
+			top: 0;
+			left: 15px;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+			content: '@';
+			pointer-events: none;
+
+		}
+
+	}
+
 	&__double {
 
 		display: flex;
