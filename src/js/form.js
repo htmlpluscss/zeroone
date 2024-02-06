@@ -27,6 +27,7 @@
 		form.addEventListener('submit', event => {
 
 			event.preventDefault();
+
 /*
 			if (typeof(grecaptcha) === 'undefined') {
 
@@ -53,6 +54,14 @@
 						.then(result => {
 
 							console.log(result);
+
+							if ( form.elements.subject.value === 'modal-login' ) {
+
+								form.querySelector('.form__error-text').classList.remove('hide');
+
+								return;
+
+							}
 
 							btn.disabled = false;
 

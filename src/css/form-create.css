@@ -59,6 +59,13 @@
 
 	}
 
+	&__error-text {
+
+		margin: 10px 0;
+		color: var(--orange);
+
+	}
+
 }
 
 .form-create {
