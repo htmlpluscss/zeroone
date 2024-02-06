@@ -59,8 +59,25 @@
 							document.querySelector('.modal-done__title').innerHTML = result.title;
 							document.querySelector('.modal-done__message').innerHTML = result.message;
 
-							document.querySelectorAll('.modal-done__ico svg')[0].classList.toggle('hide', result.status !== 'ok');
-							document.querySelectorAll('.modal-done__ico svg')[1].classList.toggle('hide', result.status === 'ok');
+							document.querySelector('.modal-done__ico-ok').classList.add('hide');
+							document.querySelector('.modal-done__ico-reg').classList.add('hide');
+							document.querySelector('.modal-done__ico-error').classList.add('hide');
+
+							if ( result.status === "ok" ) {
+
+								document.querySelector('.modal-done__ico-ok').classList.remove('hide');
+
+							}
+							else if ( result.status === "reg" ) {
+
+								document.querySelector('.modal-done__ico-reg').classList.remove('hide');
+
+							}
+							else {
+
+								document.querySelector('.modal-done__ico-error').classList.remove('hide');
+
+							}
 
 							const eventModalShow = new CustomEvent("modalShow", {
 								detail: {

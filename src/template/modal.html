@@ -2,7 +2,9 @@
 
 		<div class="modal__box">
 
-			<form action="/form/login.php" class="modal__item modal__item--login form box">
+			<form action="/form/" class="modal__item modal__item--login form box">
+
+				<input type="hidden" name="subject" value="modal-login">
 
 				<div class="box__inner">
 
@@ -12,11 +14,11 @@
 
 					<div class="form__inputbox">
 
-						<label for="modal-login-name" class="form__label">
+						<label for="modal-login-login" class="form__label">
 							Логин
 						</label>
 
-						<input class="input" name="name" placeholder="Введите данные" required="required" id="modal-login-name">
+						<input class="input" name="login" placeholder="Введите данные" required="required" id="modal-login-login">
 
 					</div>
 
@@ -54,6 +56,62 @@
 
 			</form>
 
+			<form action="/form/" class="modal__item modal__item--reg form box">
+
+				<input type="hidden" name="subject" value="modal-reg">
+
+				<div class="box__inner">
+
+					<h3 class="form__title h4">
+						Регистрация
+					</h3>
+
+					<div class="form__inputbox">
+
+						<label for="modal-reg-email" class="form__label">
+							E-mail
+						</label>
+
+						<input class="input" name="email" placeholder="Введите данные" required="required" id="modal-reg-email" type="email">
+
+					</div>
+
+					<div class="form__inputbox">
+
+						<label for="modal-reg-nickname" class="form__label">
+							Ваш ник
+						</label>
+
+						<input class="input" name="nickname" placeholder="Введите данные" required="required" id="modal-reg-nickname">
+
+					</div>
+
+					<div class="form__inputbox">
+
+						<label for="modal-reg-password" class="form__label">
+							Пароль
+						</label>
+
+						<input class="input" name="password" placeholder="Введите данные" required="required" id="modal-reg-password" type="password">
+
+					</div>
+
+					<div class="form__foot">
+
+						<button class="btn btn--orange form__submit">
+							Зарегистрироваться
+						</button>
+
+						<button class="btn btn--grey" type="button" data-modal="login">
+							Войти
+						</button>
+
+					</div>
+
+				</div>
+
+			</form>
+
 			<aside class="modal__item modal__item--done box">
 
 				<div class="box__inner">
@@ -62,18 +120,27 @@
 
 						<div class="modal-done__ico">
 
-							<svg width="72" height="72" viewBox="0 0 72 72">
-								<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m47.25 29-14 14-7-7"/>
+							<svg class="modal-done__ico-ok" width="72" height="72" viewBox="0 0 72 72">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m47.25 29-14 14-7-7"/>
+							</svg>
+
+							<svg class="modal-done__ico-reg" width="72" height="72" viewBox="0 0 72 72">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36.25 36-7.6-5.7a1.01 1.01 0 0 1-.4-.8V25a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4.45a1.01 1.01 0 0 1-.4.8L36.25 36ZM36.25 36l-7.6 5.7a1.01 1.01 0 0 0-.4.8V47a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.45a1.01 1.01 0 0 0-.4-.8L36.25 36ZM29.59 31h13.27M36.25 41v-5"/>
+							</svg>
+
+							<svg class="modal-done__ico-error" width="72" height="72" viewBox="0 0 72 72">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.25 33v5M34.53 25l-11 19a2 2 0 0 0 1.72 3h22a2 2 0 0 0 1.73-3l-11-19a1.99 1.99 0 0 0-3.45 0v0Z"/>
+								<path fill="#fff" d="M36.25 44a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
 							</svg>
 
 						</div>
 
 						<div class="modal-done__title h6">
-							Ваша заявка отправлена!
+
 						</div>
 
 						<div class="modal-done__message">
-							Спасибо, что решили воспользоваться нашим сервисом! В ближайшее время с вами свяжется наш менеджер.
+
 						</div>
 
 					</div>
