@@ -1,10 +1,10 @@
-							<div class="recent-games-data">
+							<div class="recent-games-column">
 
 {% for item in table %}
 
-								<div class="recent-games-data__item">
+								<div class="recent-games-column__item recent-games-data">
 
-									<div class="recent-games-data__user">
+									<div class="recent-games-column__user">
 
 										<picture>
 
@@ -19,7 +19,7 @@
 
 									</div>
 
-									<div class="recent-games-data__table">
+									<div class="recent-games-column__table">
 
 										<dl>
 
@@ -35,8 +35,8 @@
 												Ставка
 											</dt>
 
-											<dd>
-												{{ item.price }}
+											<dd class="recent-games-data__bet">
+												<span>{{ item.price }}.00</span> ETH
 											</dd>
 
 										</dl>
@@ -48,8 +48,8 @@
 											</dt>
 
 											<dd>
-												<div class="recent-games-data__rate">
-													<span>2.03х</span>
+												<div class="recent-games-column__rate recent-games-data__rate">
+													<span>1.00х</span>
 												</div>
 											</dd>
 
@@ -57,8 +57,8 @@
 												Сумма выплаты
 											</dt>
 
-											<dd>
-												2.00 ETH
+											<dd class="recent-games-data__win">
+												<span>{{ item.price }}.00</span> ETH
 											</dd>
 
 										</dl>
@@ -69,7 +69,7 @@
 
 {% endfor %}
 
-								<div class="recent-games-data__foot">
+								<div class="recent-games-column__foot">
 
 									<button class="btn btn--grey" type="button">
 										Load more

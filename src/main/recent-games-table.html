@@ -30,7 +30,7 @@
 
 {% for item in table %}
 
-										<tr>
+										<tr class="recent-games-data">
 
 											<td>
 
@@ -55,20 +55,20 @@
 												{{ item.date }}
 											</td>
 
-											<td>
-												{{ item.price }}
+											<td class="recent-games-data__bet">
+												<span>{{ item.price }}.00</span> ETH
 											</td>
 
 											<td>
 
-												<div class="recent-games-table__rate">
-													<span>2.03х</span>
+												<div class="recent-games-table__rate recent-games-data__rate">
+													<span>1.00х</span>
 												</div>
 
 											</td>
 
-											<td>
-												2.00 ETH
+											<td class="recent-games-data__win">
+												<span>{{ item.price }}.00</span> ETH
 											</td>
 
 										</tr>
