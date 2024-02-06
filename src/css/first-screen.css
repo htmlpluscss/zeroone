@@ -47,6 +47,8 @@
 			justify-content: space-between;
 			padding: 20px 20px 0 var(--margin);
 
+			padding-bottom: 40px;
+
 		}
 
 		@media $lgWidth {
@@ -138,6 +140,12 @@
 	&__form {
 
 		width: 524px;
+
+		.form-create__alt {
+
+			display: none;
+
+		}
 
 		@media $lgWidth {
 

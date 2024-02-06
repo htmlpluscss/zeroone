@@ -188,6 +188,7 @@
 		&__foot {
 
 			margin-top: 16px;
+			display: none;
 
 			.btn {
 
@@ -265,6 +266,8 @@
 		}
 
 		tfoot {
+
+			display: none;
 
 			.btn {
 

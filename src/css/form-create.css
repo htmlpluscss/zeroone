@@ -197,7 +197,8 @@
 
 	.social {
 
-		display: flex;
+		/* display: flex; */
+		display: none;
 		justify-content: center;
 
 		svg {

@@ -142,6 +142,7 @@
 
 		order: 5;
 		margin-left: auto;
+		display: none;
 
 		@media $mdWidth {
 
