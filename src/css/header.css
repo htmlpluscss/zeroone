@@ -56,15 +56,9 @@
 			&:hover {
 
 				color: #fff;
+				background-color: rgba( 255, 255, 255, .04 );
 
 			}
-
-		}
-
-		.is-current a {
-
-			color: #fff;
-			background-color: rgba( 255, 255, 255, .04 );
 
 		}
 

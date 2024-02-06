@@ -1,6 +1,6 @@
 							<div class="recent-games-data">
 
-{% for tr in range(1,4) %}
+{% for item in table %}
 
 								<div class="recent-games-data__item">
 
@@ -8,14 +8,14 @@
 
 										<picture>
 
-											<source srcset="/img/recent-games/user.webp 1x, /img/recent-games/user@2x.webp 2x" type="image/webp">
-											<source srcset="/img/recent-games/user.png 1x, /img/recent-games/user@2x.png 2x">
+											<source srcset="/img/recent-games/{{ item.img }}.webp 1x, /img/recent-games/{{ item.img }}@2x.webp 2x" type="image/webp">
+											<source srcset="/img/recent-games/{{ item.img }}.png 1x, /img/recent-games/{{ item.img }}@2x.png 2x">
 
-											<img src="/img/recent-games/user.png" width="40" height="40" alt="Rufus MC" loading="lazy">
+											<img src="/img/recent-games/{{ item.img }}.png" width="40" height="40" alt="{{ item.name }}" loading="lazy">
 
 										</picture>
 
-										Rufus MC
+										{{ item.name }}
 
 									</div>
 
@@ -28,7 +28,7 @@
 											</dt>
 
 											<dd>
-												16.12.23 15:34
+												{{ item.date }}
 											</dd>
 
 											<dt>
@@ -36,7 +36,7 @@
 											</dt>
 
 											<dd>
-												1.00 ETH
+												{{ item.price }}
 											</dd>
 
 										</dl>

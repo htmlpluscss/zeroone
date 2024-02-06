@@ -73,10 +73,17 @@ window.selects = select => {
 		input.addEventListener('change', () => {
 
 			valueText.textContent = el.textContent;
-			select.classList.remove('is-open');
+
+			setTimeout( ()=> select.classList.remove('is-open'));
 
 			// не мобиле системный контрол не нужен
 			control.remove();
+
+		});
+
+		btn.addEventListener('click', () => {
+
+			setTimeout( ()=> select.classList.remove('is-open'));
 
 		});
 
