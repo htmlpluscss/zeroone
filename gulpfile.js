@@ -38,8 +38,8 @@ const debug            = require('gulp-debug');
 const w3cjs            = require('gulp-w3cjs');
 
 const site             = 'OneZero';
-//const domain           = 'palladium.ae';
-const domain           = 'zero.htmlpluscss.website';
+const domain           = 'zeroone.bet';
+//const domain           = 'zero.htmlpluscss.website';
 
 const html = (files, since = {}, folder = '') => {
 
@@ -58,8 +58,8 @@ const html = (files, since = {}, folder = '') => {
 //			url : 'https://validator.w3.org/nu/'
 //		}))
 //		.pipe(w3cjs.reporter())
-//		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
-//		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
+		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
+		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
 		.pipe(gulp.dest('build' + folder))
 
 };
@@ -126,12 +126,12 @@ gulp.task('js', () => {
 });
 
 gulp.task('serve', () => {
-
+/*
 	gulp.src([
-//		'src/js/min/swiper.min.js',
+		'src/js/min/swiper.min.js',
 		'src/js/min/inputmask.min.js'
 	]).pipe(gulp.dest('build/js'));
-
+*/
 	server.init({
 		server: 'build',
 		files: [

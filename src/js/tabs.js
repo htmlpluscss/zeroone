@@ -9,25 +9,29 @@
 			const next = document.querySelector(hash),
 				  tab = next.closest('.tabs');
 
-			const nav = tab.querySelectorAll('.tabs__nav-item'),
-				  items = tab.querySelectorAll('.tabs__item');
+			if ( tab ) {
 
-			[...items].forEach( (item,index) => {
+				const nav = tab.querySelectorAll('.tabs__nav-item'),
+					  items = tab.querySelectorAll('.tabs__item');
 
-				if ( item === next ) {
+				[...items].forEach( (item,index) => {
 
-					item.classList.add('is-active');
-					nav[index].classList.add('is-active');
+					if ( item === next ) {
 
-				}
-				else {
+						item.classList.add('is-active');
+						nav[index].classList.add('is-active');
 
-					item.classList.remove('is-active');
-					nav[index].classList.remove('is-active');
+					}
+					else {
 
-				}
+						item.classList.remove('is-active');
+						nav[index].classList.remove('is-active');
 
-			});
+					}
+
+				});
+
+			}
 
 		}
 
