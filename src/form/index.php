@@ -19,7 +19,7 @@ $recaptcha_check = false;
 
 $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
 $recaptcha_secret = '6LcMlS8lAAAAAIEHFKZiLoy_yBP3YTmSlKhuZz_q';
-$recaptcha_response = $_POST['recaptcha_response'];
+//$recaptcha_response = $_POST['recaptcha_response'];
 
 $recaptcha_check = true;
 /*
@@ -42,13 +42,13 @@ $log = date('d.m.y H:i') . "\r\n";
 
 foreach ( $_POST as $key => $value ) {
 
-	if ( $key === 'subject' || $key === 'recaptcha_response' ) {
+	if ( in_array( $key , array('subject', 'recaptcha_response', 'password') ) ) {
 
 		continue;
 
 	}
 
-	$log .= $_POST[$key] . "\r\n";
+	$log .= $value . "\r\n";
 
 }
 
@@ -91,18 +91,21 @@ $mail->Port       = 587;
 $mail->setFrom('info@zeroone.bet', 'ZeroOne');
 $mail->addAddress('79198889134@ya.ru');
 $mail->addAddress('Slezin.i@gmail.com');
+$mail->addAddress('me@artin.studio');
 
 //Content
 
+$html = '';
+
 if ( empty($_POST['name']) === false ) {
 
-	$html  = '<b>Имя:</b> ' . $_POST['name'];
+	$html .= '<b>Имя:</b> ' . $_POST['name'];
 
 }
 
 if ( empty($_POST['login']) === false ) {
 
-	$html  = '<b>Логин:</b> ' . $_POST['login'];
+	$html .= '<b>Логин:</b> ' . $_POST['login'];
 
 }
 
@@ -111,9 +114,9 @@ if ( empty($_POST['email']) === false ) {
 	$html .= '<br><b>E-mail:</b> ' . $_POST['email'];
 
 }
-if ( empty($_POST['nickname']) === false ) {
+if ( empty($_POST['nick']) === false ) {
 
-	$html .= '<br><b>Ваш ник:</b> ' . $_POST['nickname'];
+	$html .= '<br><b>Ваш ник:</b> ' . $_POST['nick'];
 
 }
 
@@ -123,13 +126,14 @@ if ( empty($_POST['password']) === false ) {
 
 }
 
+if ( empty($_POST['telegram']) === false ) {
+
+	$html .= '<br><b>Телеграм:</b> ' . $_POST['telegram'];
+
+}
+
+
 if ( $_POST['subject'] === 'bid' ) {
-
-	if ( empty($_POST['telegram']) === false ) {
-
-		$html .= '<br><b>Телеграм:</b> ' . $_POST['telegram'];
-
-	}
 
 	$html .= '<br><b>Валюта для оплаты:</b> ' . $_POST['currency'];
 	$html .= '<br><b>Выберите игру:</b> ' . $_POST['game'];
@@ -144,7 +148,7 @@ if ( $_POST['subject'] === 'modal-reg' ) {
 
 }
 
-if ( in_array( $_POST['subject'] , array('modal-reg', 'bid-reg') ) ) {
+if ( in_array( $_POST['subject'] , array('bid', 'bid-reg') ) ) {
 
 	$subject = 'Поставь на победу';
 

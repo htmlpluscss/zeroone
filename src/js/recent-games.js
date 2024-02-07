@@ -151,14 +151,3 @@
 	}
 
 })(document.querySelector('.recent-games'));
-
-/*буду от тебя ждать такой json для google таблицы
-post запрос
-на {url}/set_data
-{
- "nick": "sufirt",
- "email": "baimanov.roman@gmail.com",
- "telegram": "baimanov.roman",
- "currency": "ETH",
- "game": "Dota"
-}*/

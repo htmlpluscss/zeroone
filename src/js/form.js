@@ -39,8 +39,20 @@
 
 					grecaptcha.execute(PUBLIC_KEY).then( token => {
 */
+
+
 						const formData = new FormData(form),
 							  btn = form.querySelector('.form__submit');
+
+						// Google Sheets
+
+						fetch( 'http://80.90.191.111:6000/set_data' , {
+							method: 'POST',
+							headers: {
+								'Content-Type': 'application/json'
+							},
+							body: JSON.stringify(formData)
+						});
 
 //						formData.append('recaptcha_response', token);
 
