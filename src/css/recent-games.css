@@ -311,6 +311,12 @@
 
 		}
 
+		&__date {
+
+			word-spacing: 10px;
+
+		}
+
 		&__date,
 		&__bet {
 

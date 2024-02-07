@@ -28,13 +28,16 @@
 		// Get dates for the single row
 		function getDate() {
 
-		    var currentDate = new Date();
-		    var year = currentDate.getFullYear();
-		    var month = ('0' + (currentDate.getMonth() + 1)).slice(-2);
-		    var day = ('0' + currentDate.getDate()).slice(-2);
-		    var hours = ('0' + currentDate.getHours()).slice(-2);
-		    var minutes = ('0' + currentDate.getMinutes()).slice(-2);
-		    return `${day}.${month}.${year} ${hours}:${minutes}`;
+			var currentDate = new Date();
+			currentDate.setHours( currentDate.getHours() - getRandomValue(1, 5) );
+			currentDate.setMinutes( currentDate.getMinutes() - getRandomValue(0, 60) );
+			var year = currentDate.getFullYear();
+			var month = ('0' + (currentDate.getMonth() + 1)).slice(-2);
+			var day = ('0' + currentDate.getDate()).slice(-2);
+			var hours = ('0' + currentDate.getHours()).slice(-2);
+			var minutes = ('0' + currentDate.getMinutes()).slice(-2);
+			return `${day}.${month}.${year} ${hours}:${minutes}`;
+
 		}
 
 		// Get nickname
