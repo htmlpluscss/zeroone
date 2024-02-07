@@ -70,6 +70,12 @@ window.selects = select => {
 
 		}
 
+		control.addEventListener('change', () => {
+
+			select.classList.remove('is-open');
+
+		});
+
 		input.addEventListener('change', () => {
 
 			valueText.textContent = el.textContent;

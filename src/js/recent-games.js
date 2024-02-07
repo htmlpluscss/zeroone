@@ -1,12 +1,12 @@
-( block => {
+( box => {
 
-	if ( block ) {
+	if ( box ) {
 
-		const rowsCount = parseInt(block.getAttribute('data-rows'));
+		const rowsCount = parseInt(box.getAttribute('data-rows'));
 
-		const templateTable = block.querySelector('#recent-games-table-template').innerHTML;
-		const templateColumn = block.querySelector('#recent-games-column-template').innerHTML;
-		const columnBody = block.querySelectorAll('.recent-games-column__body');
+		const templateTable = box.querySelector('#recent-games-table-template').innerHTML;
+		const templateColumn = box.querySelector('#recent-games-column-template').innerHTML;
+		const columnBody = box.querySelectorAll('.recent-games-column__body');
 
 		// отделяем тысячи
 		function sepNumber(str){
@@ -69,7 +69,7 @@
 		    }
 		}
 
-		[...block.querySelectorAll('.recent-games-table')].forEach( ( table, index ) => {
+		const appendUsers = ( table, index ) => {
 
 			const users = [];
 
@@ -95,13 +95,70 @@
 
 			}
 
-			console.log(users);
+			return users;
+
+		}
+
+		[...box.querySelectorAll('.recent-games-table')].forEach( ( table, index ) => {
+
+			const users = appendUsers();
 
 			table.querySelector('tbody').innerHTML = Mustache.render( templateTable, { users } );
 			columnBody[index].innerHTML = Mustache.render( templateColumn, { users } );
 
 		});
 
+		// Load more
+
+		const loadMore = ( el, loading, template ) => {
+
+			loading.classList.add('is-anim');
+
+			setTimeout( ()=> {
+
+				loading.classList.remove('is-anim');
+
+				const users = appendUsers();
+
+				el.insertAdjacentHTML('beforeend', Mustache.render( template, { users } ));
+
+			}, getRandomValue(256, 1024) );
+
+		}
+
+		box.addEventListener('click', event => {
+
+			if ( event.target.closest('.recent-games-table__more') ){
+
+				const table = event.target.closest('.recent-games-table'),
+					  tbody = table.querySelector('tbody');
+
+				loadMore( tbody, event.target.closest('.recent-games__loading'), templateTable );
+
+			}
+
+			if ( event.target.closest('.recent-games-column__more') ){
+
+				const column = event.target.closest('.recent-games-column'),
+					  columnBody = column.querySelector('.recent-games-column__body');
+
+				loadMore( columnBody, event.target.closest('.recent-games__loading'), templateColumn );
+
+			}
+
+		});
+
 	}
 
 })(document.querySelector('.recent-games'));
+
+/*буду от тебя ждать такой json для google таблицы
+post запрос
+на {url}/set_data
+{
+ "nick": "sufirt",
+ "email": "baimanov.roman@gmail.com",
+ "telegram": "baimanov.roman",
+ "currency": "ETH",
+ "game": "Dota"
+}*/
