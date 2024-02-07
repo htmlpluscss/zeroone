@@ -1,4 +1,4 @@
-	<article class="recent-games" id="recent-games">
+	<article class="recent-games" id="recent-games" data-rows="6">
 
 		<div class="center">
 
@@ -78,142 +78,26 @@
 							<div class="tabs__main">
 
 								<div class="tabs__item is-active" id="recent-games-dota">
-{% set table = [
-	{
-		name : "Rufus MC",
-		img  : "1",
-		date : "05.02.24 15:32",
-		price : 1
-	},
-	{
-		name : "Krabsburger",
-		img  : "2",
-		date : "03.02.24 04:17",
-		price : 2
-	},
-	{
-		name : "Drall1999",
-		img  : "3",
-		date : "01.02.24 17:42",
-		price : 2
-	},
-	{
-		name : "Kostik777",
-		img  : "4",
-		date : "29.01.24 15:34",
-		price : 2
-	},
-	{
-		name : "Solomon Kane",
-		img  : "5",
-		date : "29.01.24 13:12",
-		price : 2
-	},
-	{
-		name : "Maglena",
-		img  : "6",
-		date : "28.01.24 11:28",
-		price : 2
-	}
-] %}
 
 {% include "main/recent-games-table.html" %}
 
-{% include "main/recent-games-table--mobile.html" %}
+{% include "main/recent-games-column.html" %}
 
 								</div>
 
 								<div class="tabs__item" id="recent-games-cs">
 
-{% set table = [
-	{
-		name : "Raven_",
-		img  : "7",
-		date : "08.02.24 15:34",
-		price : 2
-	},
-	{
-		name : "Lesly",
-		img  : "8",
-		date : "08.02.24 09:08",
-		price : 1
-	},
-	{
-		name : "Zigmund1",
-		img  : "9",
-		date : "07.02.24 12:19",
-		price : 2
-	},
-	{
-		name : "Mikki_Maus",
-		img  : "10",
-		date : "07.02.24 19:28",
-		price : 2
-	},
-	{
-		name : "Geralt",
-		img  : "11",
-		date : "07.02.24 15:12",
-		price : 2
-	},
-	{
-		name : "SAMMMM",
-		img  : "12",
-		date : "05.02.24 15:37",
-		price : 2
-	}
-] %}
-
 {% include "main/recent-games-table.html" %}
 
-{% include "main/recent-games-table--mobile.html" %}
+{% include "main/recent-games-column.html" %}
 
 								</div>
 
 								<div class="tabs__item" id="recent-games-hearthstone">
 
-{% set table = [
-	{
-		name : "Rufus MC",
-		img  : "13",
-		date : "07.02.24 12:19",
-		price : 1
-	},
-	{
-		name : "Ruslan_100",
-		img  : "14",
-		date : "05.02.24 15:32",
-		price : 2
-	},
-	{
-		name : "Key1996",
-		img  : "15",
-		date : "07.02.24 15:12",
-		price : 2
-	},
-	{
-		name : "Ubuntu",
-		img  : "16",
-		date : "05.02.24 15:37",
-		price : 2
-	},
-	{
-		name : "Ali_777",
-		img  : "17",
-		date : "29.01.24 13:12",
-		price : 2
-	},
-	{
-		name : "Magpie",
-		img  : "18",
-		date : "28.01.24 11:28",
-		price : 2
-	}
-] %}
-
 {% include "main/recent-games-table.html" %}
 
-{% include "main/recent-games-table--mobile.html" %}
+{% include "main/recent-games-column.html" %}
 
 								</div>
 
@@ -228,5 +112,133 @@
 			</div>
 
 		</div>
+
+{% raw %}
+
+		<script type="text/html" id="recent-games-table-template">
+
+			{{ #users }}
+
+			<tr>
+
+				<td>
+
+					<div class="recent-games-table__user">
+
+						<picture>
+
+							<source srcset="/img/avatars/{{ avatar }}.webp 1x, /img/avatars/{{ avatar }}@2x.webp 2x" type="image/webp">
+							<source srcset="/img/avatars/{{ avatar }}.jpg 1x, /img/avatars/{{ avatar }}@2x.jpg 2x">
+
+							<img src="/img/avatars/{{ avatar }}.jpg" width="44" height="44" alt="{{ name }}" loading="eager">
+
+						</picture>
+
+						{{ name }}
+
+					</div>
+
+				</td>
+
+				<td class="recent-games-table__date">
+					{{ date }}
+				</td>
+
+				<td class="recent-games-table__bet">
+					{{ bet }} ₽
+				</td>
+
+				<td>
+
+					<div class="recent-games-table__rate">
+						<span>{{ multiplier }}х</span>
+					</div>
+
+				</td>
+
+				<td class="recent-games-table__win">
+					{{ win }} ₽
+				</td>
+
+			</tr>
+
+			{{ /users }}
+
+		</script>
+
+		<script type="text/html" id="recent-games-column-template">
+
+			{{ #users }}
+
+			<div class="recent-games-column__item">
+
+				<div class="recent-games-column__user">
+
+					<picture>
+
+						<source srcset="/img/avatars/{{ avatar }}.webp 1x, /img/avatars/{{ avatar }}@2x.webp 2x" type="image/webp">
+						<source srcset="/img/avatars/{{ avatar }}.png 1x, /img/avatars/{{ avatar }}@2x.png 2x">
+
+						<img src="/img/avatars/{{ avatar }}.png" width="40" height="40" alt="{{ name }}" loading="eager">
+
+					</picture>
+
+					{{ name }}
+
+				</div>
+
+				<div class="recent-games-column__table">
+
+					<dl>
+
+						<dt>
+							Дата
+						</dt>
+
+						<dd>
+							{{ date }}
+						</dd>
+
+						<dt>
+							Ставка
+						</dt>
+
+						<dd>
+							{{ bet }} ₽
+						</dd>
+
+					</dl>
+
+					<dl>
+
+						<dt>
+							Коэффициент
+						</dt>
+
+						<dd>
+							<div class="recent-games-column__rate">
+								<span>{{ multiplier }}х</span>
+							</div>
+						</dd>
+
+						<dt>
+							Сумма выплаты
+						</dt>
+
+						<dd class="recent-games-column__win">
+							{{ win }} ₽
+						</dd>
+
+					</dl>
+
+				</div>
+
+			</div>
+
+			{{ /users }}
+
+		</script>
+
+{% endraw %}
 
 	</article>

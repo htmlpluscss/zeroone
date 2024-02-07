@@ -30,3 +30,9 @@ $xsWidth: (max-width: 359px);
 	color: var(--green);
 
 }
+
+.color-orange {
+
+	color: var(--orange);
+
+}

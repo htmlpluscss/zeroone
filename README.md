@@ -1,8 +1,8 @@
 # OneZero
-[build](https://pg-development.vercel.app/)
+[build](https://zeroone.bet/)
 
 ## support browsers:
 **Android >= 5**
 
 ### Working hours:
-40:00
+30:00

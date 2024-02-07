@@ -73,6 +73,12 @@
 			font-family: Unbounded;
 			margin-bottom: 12px;
 
+			img {
+
+				border-radius: 50%;
+
+			}
+
 			@media $smWidth {
 
 				margin-bottom: 6px;
@@ -178,10 +184,16 @@
 				padding: 2px 10px;
 				border-radius: 100px;
 				text-transform: uppercase;
-				color: var(--green);
-				background-color: rgba(68, 201, 138, 0.08);
+				color: var(--orange);
+				background-color: rgba(254, 120, 24, 0.08);
 
 			}
+
+		}
+
+		&__win {
+
+			color: var(--green);
 
 		}
 
@@ -299,6 +311,20 @@
 
 		}
 
+		&__date,
+		&__bet {
+
+			white-space: nowrap;
+
+		}
+
+		&__win {
+
+			color: var(--green);
+			white-space: nowrap;
+
+		}
+
 		&__rate {
 
 			display: flex;
@@ -310,8 +336,8 @@
 				font-size: 16px;
 				border-radius: 100px;
 				text-transform: uppercase;
-				color: var(--green);
-				background-color: rgba(68, 201, 138, 0.08);
+				color: var(--orange);
+				background-color: rgba(254, 120, 24, 0.08);
 
 			}
 

@@ -15,65 +15,20 @@
 										</th>
 
 										<th>
-											<span class="color-green">
+											<span class="color-orange">
 												Коэффициент
 											</span>
 										</th>
 
 										<th>
-											Сумма выплаты
+											<span class="color-green">
+												Сумма выплаты
+											</span>
 										</th>
 
 									</thead>
 
 									<tbody>
-
-{% for item in table %}
-
-										<tr class="recent-games-data">
-
-											<td>
-
-												<div class="recent-games-table__user">
-
-													<picture>
-
-														<source srcset="/img/recent-games/{{ item.img }}.webp 1x, /img/recent-games/{{ item.img }}@2x.webp 2x" type="image/webp">
-														<source srcset="/img/recent-games/{{ item.img }}.png 1x, /img/recent-games/{{ item.img }}@2x.png 2x">
-
-														<img src="/img/recent-games/{{ item.img }}.png" width="44" height="44" alt="{{ item.name }}" loading="lazy">
-
-													</picture>
-
-													{{ item.name }}
-
-												</div>
-
-											</td>
-
-											<td>
-												{{ item.date }}
-											</td>
-
-											<td class="recent-games-data__bet">
-												<span>{{ item.price }}.00</span> ETH
-											</td>
-
-											<td>
-
-												<div class="recent-games-table__rate recent-games-data__rate">
-													<span>1.00х</span>
-												</div>
-
-											</td>
-
-											<td class="recent-games-data__win">
-												<span>{{ item.price }}.00</span> ETH
-											</td>
-
-										</tr>
-
-{% endfor %}
 
 									</tbody>
 
