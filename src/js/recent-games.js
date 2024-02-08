@@ -26,11 +26,12 @@
 		}
 
 		// Get dates for the single row
+
+		const currentDate = new Date();
+
 		function getDate() {
 
-			var currentDate = new Date();
-			currentDate.setHours( currentDate.getHours() - getRandomValue(1, 5) );
-			currentDate.setMinutes( currentDate.getMinutes() - getRandomValue(0, 60) );
+			currentDate.setMinutes( currentDate.getMinutes() - getRandomValue(0, 20) );
 			var year = currentDate.getFullYear();
 			var month = ('0' + (currentDate.getMonth() + 1)).slice(-2);
 			var day = ('0' + currentDate.getDate()).slice(-2);
