@@ -1,123 +1,80 @@
 ( forms => {
 
-	//reCaptcha v3
-
-	const PUBLIC_KEY = '6LcMlS8lAAAAAJgCJggfIyKopNr4NYq8CSS0dEZz';
-
-	const reCaptcha = () => {
-
-		[...forms].forEach( form => {
-
-			form.removeEventListener('input', reCaptcha);
-
-		});
-
-		const script = document.createElement('script');
-
-		script.src = 'https://www.google.com/recaptcha/api.js?render=' + PUBLIC_KEY;
-
-		document.head.appendChild(script);
-
-	}
-
 	[...forms].forEach( form => {
-
-//		form.addEventListener('input', reCaptcha);
 
 		form.addEventListener('submit', event => {
 
 			event.preventDefault();
 
-/*
-			if (typeof(grecaptcha) === 'undefined') {
+			const formData = new FormData(form),
+				  btn = form.querySelector('.form__submit');
 
-				alert('Error! Google reCaptcha');
+			// Google Sheets
 
-			} else {
+			fetch( 'http://80.90.191.111:5000/set_data' , {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(formData)
+			});
 
-				grecaptcha.ready( () => {
+			btn.disabled = true;
 
-					grecaptcha.execute(PUBLIC_KEY).then( token => {
-*/
+			fetch(form.getAttribute('action'), {
+				method: 'POST',
+				body: formData
+			})
+			.then(response => response.json())
+			.then(result => {
 
+				console.log(result);
 
-						const formData = new FormData(form),
-							  btn = form.querySelector('.form__submit');
+				if ( form.elements.subject.value === 'modal-login' ) {
 
-						// Google Sheets
+					form.querySelector('.form__error-text').classList.remove('hide');
 
-						fetch( 'http://80.90.191.111:5000/set_data' , {
-							method: 'POST',
-							headers: {
-								'Content-Type': 'application/json'
-							},
-							body: JSON.stringify(formData)
-						});
+					return;
 
-//						formData.append('recaptcha_response', token);
+				}
 
-						btn.disabled = true;
+				btn.disabled = false;
 
-						fetch(form.getAttribute('action'), {
-							method: 'POST',
-							body: formData
-						})
-						.then(response => response.json())
-						.then(result => {
+				document.querySelector('.modal-done__title').innerHTML = result.title;
+				document.querySelector('.modal-done__message').innerHTML = result.message;
 
-							console.log(result);
+				document.querySelector('.modal-done__ico-ok').classList.add('hide');
+				document.querySelector('.modal-done__ico-reg').classList.add('hide');
+				document.querySelector('.modal-done__ico-error').classList.add('hide');
 
-							if ( form.elements.subject.value === 'modal-login' ) {
+				if ( result.status === "ok" ) {
 
-								form.querySelector('.form__error-text').classList.remove('hide');
+					document.querySelector('.modal-done__ico-ok').classList.remove('hide');
 
-								return;
+				}
+				else if ( result.status === "reg" ) {
 
-							}
+					document.querySelector('.modal-done__ico-reg').classList.remove('hide');
 
-							btn.disabled = false;
+				}
+				else {
 
-							document.querySelector('.modal-done__title').innerHTML = result.title;
-							document.querySelector('.modal-done__message').innerHTML = result.message;
+					document.querySelector('.modal-done__ico-error').classList.remove('hide');
 
-							document.querySelector('.modal-done__ico-ok').classList.add('hide');
-							document.querySelector('.modal-done__ico-reg').classList.add('hide');
-							document.querySelector('.modal-done__ico-error').classList.add('hide');
+				}
 
-							if ( result.status === "ok" ) {
-
-								document.querySelector('.modal-done__ico-ok').classList.remove('hide');
-
-							}
-							else if ( result.status === "reg" ) {
-
-								document.querySelector('.modal-done__ico-reg').classList.remove('hide');
-
-							}
-							else {
-
-								document.querySelector('.modal-done__ico-error').classList.remove('hide');
-
-							}
-
-							const eventModalShow = new CustomEvent("modalShow", {
-								detail: {
-									selector: "done"
-								}
-							});
-
-							modal.dispatchEvent(eventModalShow);
-
-							form.reset();
-
-						});
-/*
-					});
-
+				const eventModalShow = new CustomEvent("modalShow", {
+					detail: {
+						selector: "done"
+					}
 				});
 
-			}
-*/
+				modal.dispatchEvent(eventModalShow);
+
+				form.reset();
+
+			});
+
 		});
 
 	});
