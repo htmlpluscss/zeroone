@@ -115,7 +115,27 @@
 		ul {
 
 			display: flex;
-			gap: 12px;
+			justify-content: center;
+			gap: 0 12px;
+
+			@media $mdWidth {
+
+				gap: 6px 12px;
+
+				a {
+
+					padding: 0;
+
+				}
+
+			}
+
+			@media $smWidth {
+
+				flex-wrap: wrap;
+				margin-bottom: 12px;
+
+			}
 
 		}
 

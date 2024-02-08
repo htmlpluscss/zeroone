@@ -1,0 +1,179 @@
+.page-text {
+
+	margin: 12px auto;
+
+	&__bg {
+
+		&-about-us::before {
+
+			background-position: left bottom;
+			background-repeat: no-repeat;
+			background-image: url(/img/page-text/about.svg);
+
+			@media $smWidth {
+
+				background-position: bottom;
+
+			}
+
+		}
+
+		&-privacy-police::before {
+
+			background-position: calc(50% + 100px) top;
+			background-repeat: no-repeat;
+			background-image: url(/img/page-text/privacy-police.svg);
+
+			@media $smWidth {
+
+				background-position: top;
+
+			}
+
+		}
+
+		&-terms-of-use {
+
+			& > .box__inner {
+
+				background-position: right bottom;
+				background-repeat: no-repeat;
+				background-image: url(/img/page-text/terms-of-use-bottom.svg);
+
+				@media $smWidth {
+
+					background-position: bottom;
+
+				}
+
+			}
+
+			&::before {
+
+				background-position: right top;
+				background-repeat: no-repeat;
+				background-image: url(/img/page-text/terms-of-use-top.svg);
+
+				@media $smWidth {
+
+					background-position: top;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&__title {
+
+		text-align: center;
+		margin: var(--gap) auto;
+
+	}
+
+	&__body {
+
+		width: 1224px;
+		padding: 0 24px;
+		max-width: 100%;
+		margin: 60px auto;
+
+		font-family: Unbounded;
+		font-size: 18px;
+		line-height: 32px;
+
+		@media $smWidth {
+
+			font-size: 16px;
+			line-height: 1.6;
+			padding: 0 20px;
+
+		}
+
+	}
+
+	&__date {
+
+		display: block;
+		margin: 32px 0;
+		font-weight: 700;
+
+		@media $smWidth {
+
+			font-size: 14px;
+			font-weight: 500;
+
+		}
+
+	}
+
+	h2 {
+
+		margin: 32px 0;
+		font-size: 18px;
+		font-weight: 700;
+
+	}
+
+	p, ul {
+
+		margin-top: 32px;
+
+		@media $smWidth {
+
+			margin-top: 24px;
+
+		}
+
+		a:not([href^="mail"]) {
+
+			text-decoration: underline;
+
+			&:hover {
+
+
+			}
+
+		}
+
+	}
+
+	ul {
+
+		li {
+
+			padding-left: 28px;
+
+			@media $smWidth {
+
+				padding-left: 24px;
+
+				&::before {
+
+					top: 10px;
+					left: 0;
+
+				}
+
+			}
+
+			&::before {
+
+				position: absolute;
+				top: 14px;
+				left: 11px;
+				content: '';
+				border-radius: 50%;
+				width: 5px;
+				height: 5px;
+				background-color: currentColor;
+
+			}
+
+		}
+
+	}
+
+}

@@ -1,7 +1,7 @@
 <?php
 
 // URL, куда отправляется запрос
-$url = 'http://80.90.191.111:6000/set_data';
+$url = 'http://80.90.191.111:5000/set_data';
 
 // Данные для отправки в формате JSON
 $data = array(
@@ -14,11 +14,18 @@ $data = array(
 
 $json_data = json_encode($data);
 
+$headers = array(
+    'Content-Type: application/json',
+    'Access-Control-Allow-Origin: *',
+    'Access-Control-Allow-Methods: *',
+    'Access-Control-Allow-Headers: *'
+);
+
 // Настройки cURL
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 // Выполнение запроса и получение ответа

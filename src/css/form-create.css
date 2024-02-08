@@ -80,6 +80,20 @@
 
 }
 
+.form-feedback {
+
+	width: 480px;
+	margin: 100px auto;
+	max-width: 100%;
+
+	.box__inner {
+
+		padding: 8px 36px 40px;
+
+	}
+
+}
+
 .form-create {
 
 	padding: 40px 60px;

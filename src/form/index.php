@@ -148,6 +148,12 @@ if ( $_POST['subject'] === 'modal-reg' ) {
 
 }
 
+if ( $_POST['subject'] === 'feedback' ) {
+
+	$subject = 'Оставайся на связи';
+
+}
+
 if ( in_array( $_POST['subject'] , array('bid', 'bid-reg') ) ) {
 
 	$subject = 'Поставь на победу';
@@ -168,6 +174,14 @@ if ( $mail->send() ) {
 	$success->status = "ok";
 	$success->title  = "Ваша заявка отправлена!";
 	$success->message  = "Спасибо, что решили воспользоваться нашим сервисом! В ближайшее время с вами свяжется наш менеджер.";
+
+	if ( $_POST['subject'] === 'feedback' ) {
+
+		$success->status = "ok";
+		$success->title = "Ваше обращение отправлено!";
+		$success->message  = "Спасибо, что решили воспользоваться нашим сервисом! В ближайшее время с вами свяжется наш менеджер.";
+
+	}
 
 	if ( in_array( $_POST['subject'] , array('modal-reg', 'bid-reg') ) ) {
 
