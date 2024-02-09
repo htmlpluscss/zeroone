@@ -17,7 +17,9 @@ console.log(form);
 
 			btn.disabled = true;
 
-			console.log(formDataJSON,form);
+			console.log(form);
+			console.log(formData);
+			console.log(formDataJSON);
 
 			fetch(form.getAttribute('action'), {
 				method: 'POST',
