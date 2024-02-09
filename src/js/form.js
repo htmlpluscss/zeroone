@@ -9,21 +9,14 @@
 			const formData = new FormData(form),
 				  btn = form.querySelector('.form__submit');
 
-			// Google Sheets
+			btn.disabled = true;
 
-			fetch( 'http://80.90.191.111:5000/set_data' , {
+			fetch(form.getAttribute('action'), {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify(formData)
-			});
-
-			btn.disabled = true;
-
-			fetch(form.getAttribute('action'), {
-				method: 'POST',
-				body: formData
 			})
 			.then(response => response.json())
 			.then(result => {

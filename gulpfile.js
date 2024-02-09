@@ -41,6 +41,9 @@ const site             = 'OneZero';
 const domain           = 'zeroone.bet';
 //const domain           = 'zero.htmlpluscss.website';
 
+require('dotenv').config();
+const urlForms = process.env.API_URL_FORMS;
+
 const html = (files, since = {}, folder = '') => {
 
 	return gulp.src(files, since)
@@ -49,17 +52,18 @@ const html = (files, since = {}, folder = '') => {
 		.pipe(nunjucksRender({
 			data: {
 				url: 'https://' + domain,
-				domain : domain,
-				site: site
+				domain,
+				site,
+				urlForms : urlForms + '/api/future/'
 			},
 			path: 'src/'
 		}))
-//		.pipe(w3cjs({
-//			url : 'https://validator.w3.org/nu/'
-//		}))
-//		.pipe(w3cjs.reporter())
-		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
-		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
+		.pipe(w3cjs({
+			url : 'https://validator.w3.org/nu/'
+		}))
+		.pipe(w3cjs.reporter())
+//		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
+//		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
 		.pipe(gulp.dest('build' + folder))
 
 };
@@ -111,9 +115,6 @@ gulp.task('js', () => {
 		.pipe(remember('js'))
 		.pipe(concat('scripts.js'))
 		.pipe(sourcemaps.write())
-
-// prod
-
 		.pipe(minify({
 			preserveComments: "some",
 			ext : {
@@ -178,8 +179,8 @@ gulp.task('min', () => {
 	return gulp.src(['build/**/*.html'])
 		.pipe(replace('<link href="/css/styles.css" rel="preload" as="style">', ''))
 		.pipe(replace('<link href="/js/scripts.js" rel="preload" as="script">', ''))
-//		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
-//		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
+		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
+		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
 		.pipe(replace('<link href="/css/styles.css" rel="stylesheet">', '<style>' + fs.readFileSync('build/css/styles.min.css', 'utf8') + '</style>'))
 		.pipe(replace('<script defer src="/js/scripts.js"></script>', ''))
 		.pipe(replace('</body>', fs.readFileSync('build/js/scripts.min.js', 'utf8') + '</body>'))
