@@ -12,16 +12,19 @@
 			event.preventDefault();
 
 			const formData = new FormData(form),
+				  formDataJSON = JSON.stringify(formData),
 				  btn = form.querySelector('.form__submit');
 
 			btn.disabled = true;
+
+			console.log(formDataJSON);
 
 			fetch(form.getAttribute('action'), {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
 				},
-				body: JSON.stringify(formData)
+				body: formDataJSON
 			})
 			.then(response => response.json())
 			.then(result => {
