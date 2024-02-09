@@ -6,27 +6,25 @@
 	[...forms].forEach( form => {
 
 		const templateDone = form.querySelector('.form-template-done').innerHTML;
-console.log(form);
+
 		form.addEventListener('submit', event => {
 
 			event.preventDefault();
 
 			const formData = new FormData(form),
-				  formDataJSON = JSON.stringify(formData),
+				  formDataJSON = {},
 				  btn = form.querySelector('.form__submit');
 
-			btn.disabled = true;
+			formData.forEach( (value, key) => formDataJSON[key] = value );
 
-			console.log(form);
-			console.log(formData);
-			console.log(formDataJSON);
+			btn.disabled = true;
 
 			fetch(form.getAttribute('action'), {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
 				},
-				body: formDataJSON
+				body: JSON.stringify(formDataJSON)
 			})
 			.then(response => response.json())
 			.then(result => {
