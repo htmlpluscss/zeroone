@@ -54,7 +54,7 @@ const html = (files, since = {}, folder = '') => {
 				url: 'https://' + domain,
 				domain,
 				site,
-				urlForms : urlForms + '/api/future/'
+				urlForms : urlForms + '/api/future/user_data'
 			},
 			path: 'src/'
 		}))
