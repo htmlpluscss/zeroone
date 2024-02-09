@@ -1,6 +1,11 @@
 ( forms => {
 
+	const doneResult = document.querySelector('.modal-done');
+	const templateError = doneResult.querySelector('.form-template-error').innerHTML;
+
 	[...forms].forEach( form => {
+
+		const templateDone = form.querySelector('.form-template-done').innerHTML;
 
 		form.addEventListener('submit', event => {
 
@@ -33,26 +38,17 @@
 
 				btn.disabled = false;
 
-				document.querySelector('.modal-done__title').innerHTML = result.title;
-				document.querySelector('.modal-done__message').innerHTML = result.message;
-
-				document.querySelector('.modal-done__ico-ok').classList.add('hide');
-				document.querySelector('.modal-done__ico-reg').classList.add('hide');
-				document.querySelector('.modal-done__ico-error').classList.add('hide');
 
 				if ( result.status === "ok" ) {
 
-					document.querySelector('.modal-done__ico-ok').classList.remove('hide');
-
-				}
-				else if ( result.status === "reg" ) {
-
-					document.querySelector('.modal-done__ico-reg').classList.remove('hide');
+					doneResult.innerHTML = templateDone;
 
 				}
 				else {
 
-					document.querySelector('.modal-done__ico-error').classList.remove('hide');
+					doneResult.innerHTML = templateError;
+
+					doneResult.querySelector('.modal-done__message').innerHTML = result.message;
 
 				}
 

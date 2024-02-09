@@ -122,29 +122,11 @@ $success = new class{};
 if ( $mail->send() ) {
 
 	$success->status = "ok";
-	$success->title  = "Ваша заявка отправлена!";
-	$success->message  = "Спасибо, что решили воспользоваться нашим сервисом! В ближайшее время с вами свяжется наш менеджер.";
-
-	if ( $_POST['subject'] === 'feedback' ) {
-
-		$success->status = "ok";
-		$success->title = "Спасибо за подписку!";
-		$success->message  = "Теперь Вы всегда будете в курсе последних новостей и событий.";
-
-	}
-
-	if ( in_array( $_POST['subject'] , array('modal-reg', 'bid-reg') ) ) {
-
-		$success->status = "reg";
-		$success->title = "Ваш запрос принят!";
-		$success->message  = "Мы находимся на захватывающем этапе бета-тестирования, где каждое место ценно как золото. Скоро придет Ваша очередь! Ожидайте уведомления на Ваш имэйл. <br> Мы готовим для вас нечто особенное!";
-
-	}
 
 } else {
 
-	$success->title  = "Что-то пошло не так.";
-	$success->message  = "Ваши данные не были отправлены, пожалуйста, попробуйте еще раз позднее. <br>" . $mail->ErrorInfo;
+	$success->status = "error";
+	$success->message = $mail->ErrorInfo;
 
 }
 

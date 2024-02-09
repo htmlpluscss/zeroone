@@ -62,8 +62,8 @@ const html = (files, since = {}, folder = '') => {
 			url : 'https://validator.w3.org/nu/'
 		}))
 		.pipe(w3cjs.reporter())
-//		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
-//		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
+		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
+		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
 		.pipe(gulp.dest('build' + folder))
 
 };
