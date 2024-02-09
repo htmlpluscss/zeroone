@@ -11,38 +11,13 @@ require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
-
-// reCAPTCHA v3
-// https://www.google.com/recaptcha/admin/
-
-$recaptcha_check = false;
-
-$recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-$recaptcha_secret = '6LcMlS8lAAAAAIEHFKZiLoy_yBP3YTmSlKhuZz_q';
-//$recaptcha_response = $_POST['recaptcha_response'];
-
-$recaptcha_check = true;
-/*
-if ( empty($recaptcha_response) === false ) {
-
-    $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
-    $recaptcha = json_decode($recaptcha);
-
-	if ( $recaptcha["success"] and $recaptcha["score"] >= 0.5 ) {
-
-		$recaptcha_check = true;
-
-	}
-
-}
-*/
 // логируем письма
 
 $log = date('d.m.y H:i') . "\r\n";
 
 foreach ( $_POST as $key => $value ) {
 
-	if ( in_array( $key , array('subject', 'recaptcha_response', 'password') ) ) {
+	if ( in_array( $key , array('subject', 'password') ) ) {
 
 		continue;
 
@@ -54,38 +29,13 @@ foreach ( $_POST as $key => $value ) {
 
 $log .= "___________\r\n";
 
-if ( $recaptcha_check === false ) {
-
-	$fp = fopen('log-invalid-recaptcha.txt', "a");
-	fwrite($fp, $log);
-	fclose($fp);
-
-	echo '{"title":"reCaptcha error","message":"Пожалуйста, свяжитесь с менеджером на прямую"}';
-
-	exit;
-
-} else {
-
-	$fp = fopen('log-mail.txt', "a");
-	fwrite($fp, $log);
-	fclose($fp);
-
-}
+$fp = fopen('log-mail.txt', "a");
+fwrite($fp, $log);
+fclose($fp);
 
 // отправляем письмо
 
 $mail = new PHPMailer();
-
-//Server settings
-//$mail->SMTPDebug = SMTP::DEBUG_SERVER;
-
-//$mail->isSMTP();
-$mail->SMTPAuth   = true;
-$mail->Host       = 'mail.zeroone.bet';
-$mail->Username   = 'info@zeroone.bet';
-$mail->Password   = 'yC1nI6fS6aoC8eE2';
-$mail->SMTPSecure = 'none';
-$mail->Port       = 587;
 
 //Recipients
 $mail->setFrom('info@zeroone.bet', 'ZeroOne');
@@ -178,16 +128,16 @@ if ( $mail->send() ) {
 	if ( $_POST['subject'] === 'feedback' ) {
 
 		$success->status = "ok";
-		$success->title = "Ваше обращение отправлено!";
-		$success->message  = "Спасибо, что решили воспользоваться нашим сервисом! В ближайшее время с вами свяжется наш менеджер.";
+		$success->title = "Спасибо за подписку!";
+		$success->message  = "Теперь вы всегда будете в курсе последних новостей и событий.";
 
 	}
 
 	if ( in_array( $_POST['subject'] , array('modal-reg', 'bid-reg') ) ) {
 
 		$success->status = "reg";
-		$success->title = "Ваша заявка на регистрацию в&nbsp;системе отправлена!";
-		$success->message  = "В данный момент сервис находится на стадии бета-тестирования. На вашу электронную почту поступит письмо о запуске сервиса. <br>Благодарим за ожидание!";
+		$success->title = "Ваш запрос принят!";
+		$success->message  = "Мы находимся на захватывающем этапе бета-тестирования, где каждое место ценно как золото. Скоро придет Ваша очередь!Ожидайте уведомления на Ваш имэйл. <br> Мы готовим для вас нечто особенное!";
 
 	}
 
