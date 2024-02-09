@@ -6,7 +6,7 @@
 	[...forms].forEach( form => {
 
 		const templateDone = form.querySelector('.form-template-done').innerHTML;
-
+console.log(form);
 		form.addEventListener('submit', event => {
 
 			event.preventDefault();
@@ -17,7 +17,7 @@
 
 			btn.disabled = true;
 
-			console.log(formDataJSON);
+			console.log(formDataJSON,form);
 
 			fetch(form.getAttribute('action'), {
 				method: 'POST',
