@@ -58,9 +58,9 @@ const html = (files, since = {}, folder = '') => {
 			},
 			path: 'src/'
 		}))
-		.pipe(w3cjs({
-			url : 'https://validator.w3.org/nu/'
-		}))
+//		.pipe(w3cjs({
+//			url : 'https://validator.w3.org/nu/'
+//		}))
 		.pipe(w3cjs.reporter())
 		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
 		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))

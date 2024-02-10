@@ -6,7 +6,7 @@
 		const startDate = new Date( items[0].getAttribute('data-date') );
 		const currentDate = new Date();
 		const difference = currentDate - startDate;
-		const daysPassed = parseInt( Math.floor(difference / (1000 * 60 )) / 5 );
+		const daysPassed = parseInt( Math.floor(difference / (1000 * 60 )) / 50 );
 
 		const options = {
 
