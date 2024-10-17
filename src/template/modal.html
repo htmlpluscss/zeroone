@@ -2,9 +2,10 @@
 
 		<div class="modal__box">
 
-			<form action="{{ urlForms }}" class="modal__item modal__item--login form box">
+			<form action="/send/" class="modal__item modal__item--login form box">
 
 				<input type="hidden" name="subject" value="modal-login">
+				<input type="hidden" name="redirect" value="{{ auth }}">
 
 				<div class="box__inner">
 
@@ -84,9 +85,10 @@
 
 			</form>
 
-			<form action="{{ urlForms }}" class="modal__item modal__item--reg form box">
+			<form action="/send/" class="modal__item modal__item--reg form box">
 
 				<input type="hidden" name="subject" value="modal-reg">
+				<input type="hidden" name="redirect" value="{{ auth }}">
 
 				<div class="box__inner">
 

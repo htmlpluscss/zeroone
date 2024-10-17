@@ -11,6 +11,8 @@
 
 			event.preventDefault();
 
+			location.assign(form.elements.redirect.value);
+
 			const formData = new FormData(form),
 				  formDataJSON = {},
 				  btn = form.querySelector('.form__submit');
@@ -40,7 +42,6 @@
 				}
 
 				btn.disabled = false;
-
 
 				if ( result.status === "ok" ) {
 

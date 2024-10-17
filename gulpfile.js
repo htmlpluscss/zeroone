@@ -37,12 +37,11 @@ const remember         = require('gulp-remember');
 const debug            = require('gulp-debug');
 const w3cjs            = require('gulp-w3cjs');
 
-const site             = 'OneZero';
-const domain           = 'zeroone.bet';
-//const domain           = 'zero.htmlpluscss.website';
-
 require('dotenv').config();
-const urlForms = process.env.API_URL_FORMS;
+
+const site = process.env.SITE;
+const domain = process.env.DOMAIN;
+const auth = process.env.ZEROONE_AUTH;
 
 const html = (files, since = {}, folder = '') => {
 
@@ -54,7 +53,7 @@ const html = (files, since = {}, folder = '') => {
 				url: 'https://' + domain,
 				domain,
 				site,
-				urlForms : urlForms + '/api/future/user_data'
+				auth
 			},
 			path: 'src/'
 		}))
@@ -179,13 +178,18 @@ gulp.task('min', () => {
 	return gulp.src(['build/**/*.html'])
 		.pipe(replace('<link href="/css/styles.css" rel="preload" as="style">', ''))
 		.pipe(replace('<link href="/js/scripts.js" rel="preload" as="script">', ''))
+		.pipe(replace('<link href="/css/styles.css" rel="stylesheet">', ''))
+		.pipe(replace('<script defer src="/js/scripts.js"></script>', ''))
+
+
+
 		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
 		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
 		.pipe(replace('<link href="/css/styles.css" rel="stylesheet">', '<style>' + fs.readFileSync('build/css/styles.min.css', 'utf8') + '</style>'))
 		.pipe(replace('<script defer src="/js/scripts.js"></script>', ''))
-		.pipe(replace('</body>', fs.readFileSync('build/js/scripts.min.js', 'utf8') + '</body>'))
-		.pipe(htmlmin({ collapseWhitespace: true }))
-		.pipe(replace('<br', ' <br'))
+		.pipe(replace('</body>', '<script>' + fs.readFileSync('build/js/scripts.min.js', 'utf8') + '</script></body>'))
+//		.pipe(htmlmin({ collapseWhitespace: true }))
+//		.pipe(replace('<br', ' <br'))
 		.pipe(gulp.dest('build'))
 
 });
