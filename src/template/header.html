@@ -10,7 +10,7 @@
 
 						<div class="header__logo">
 
-							<a href="/">
+							<a href="{{ subdomain }}/">
 
 								<img src="/img/logo.svg" width="145" height="20" alt="{{ site }} logo">
 
@@ -18,10 +18,12 @@
 
 						</div>
 
+{% include "template/lang.html" %}
+
 						<nav class="header__menu">
 
 							<ul>
-								<li><a href="/">Поставь на победу</a></li>
+								<li><a href="{{ subdomain }}/">Поставь на победу</a></li>
 								<li><a href="{% if folder %}/{% endif %}#recent-games">Последние игры</a></li>
 								<li><a href="{% if folder %}/{% endif %}#how-work">Как это работает</a></li>
 							</ul>
@@ -32,6 +34,7 @@
 
 							<a class="btn btn--orange" href="{{ auth }}">
 								Войти
+								{{ translate.LOGIN[lang] }}
 							</a>
 <!--
 							<button class="btn btn--orange" type="button" data-modal="login">

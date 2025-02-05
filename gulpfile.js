@@ -43,27 +43,65 @@ const site = process.env.SITE;
 const domain = process.env.DOMAIN;
 const auth = process.env.ZEROONE_AUTH;
 
+const langs            = ['ru','en'];
+const translate        = require('./translations');
+
+// если нет перевода
+for ( let key in translate ) {
+
+	langs.forEach( lang => {
+
+		if ( !translate[key][lang] ) {
+
+			translate[key][lang] = key;
+
+		}
+
+	});
+
+}
+
 const html = (files, since = {}, folder = '') => {
 
-	return gulp.src(files, since)
-		.pipe(plumber())
-		.pipe(debug({title: 'html:'}))
-		.pipe(nunjucksRender({
-			data: {
-				url: 'https://' + domain,
-				domain,
-				site,
-				auth
-			},
-			path: 'src/'
-		}))
-//		.pipe(w3cjs({
-//			url : 'https://validator.w3.org/nu/'
-//		}))
-		.pipe(w3cjs.reporter())
-		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
-		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
-		.pipe(gulp.dest('build' + folder))
+	const promises = langs.map( lang => {
+
+		let folder = '';
+
+		if ( lang !== 'en' ) {
+
+			folder = '/' + lang;
+
+		}
+
+		return new Promise((resolve, reject) => {
+
+			gulp.src(files, since)
+				.pipe(plumber())
+				.pipe(debug({title: 'html:'}))
+				.pipe(nunjucksRender({
+					data: {
+						url: 'https://' + domain,
+						domain,
+						site,
+						auth,
+						subdomain : folder,
+						lang,
+						langs,
+						translate
+					},
+					path: 'src/'
+				}))
+				.pipe(w3cjs({
+					url : 'https://validator.w3.org/nu/'
+				}))
+				.pipe(w3cjs.reporter())
+				.pipe(gulp.dest('build' + folder ))
+				.on('end', resolve)
+		});
+
+	});
+
+	return Promise.all(promises);
 
 };
 
@@ -103,9 +141,7 @@ gulp.task('js', () => {
 
 		'src/js/min/*.js',
 		'src/js/js.js',
-		'src/js/*.js',
-		'!src/js/min/swiper.min.js',
-		'!src/js/min/inputmask.min.js'
+		'src/js/*.js'
 
 	], {since: gulp.lastRun('js')})
 
@@ -126,12 +162,7 @@ gulp.task('js', () => {
 });
 
 gulp.task('serve', () => {
-/*
-	gulp.src([
-		'src/js/min/swiper.min.js',
-		'src/js/min/inputmask.min.js'
-	]).pipe(gulp.dest('build/js'));
-*/
+
 	server.init({
 		server: 'build',
 		files: [
@@ -150,7 +181,6 @@ gulp.task('copy', () => {
 
 	return gulp.src(['src/**/*.*', '!src/**/*.{css,html,js}'])
 			.pipe(newer('build'))
-			.pipe(debug({title: 'copy:newer'}))
 			.pipe(gulp.dest('build'))
 
 });
@@ -176,20 +206,9 @@ gulp.task('default', gulp.series(
 gulp.task('min', () => {
 
 	return gulp.src(['build/**/*.html'])
-		.pipe(replace('<link href="/css/styles.css" rel="preload" as="style">', ''))
-		.pipe(replace('<link href="/js/scripts.js" rel="preload" as="script">', ''))
-		.pipe(replace('<link href="/css/styles.css" rel="stylesheet">', ''))
-		.pipe(replace('<script defer src="/js/scripts.js"></script>', ''))
-
-
-
-		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
-		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
 		.pipe(replace('<link href="/css/styles.css" rel="stylesheet">', '<style>' + fs.readFileSync('build/css/styles.min.css', 'utf8') + '</style>'))
 		.pipe(replace('<script defer src="/js/scripts.js"></script>', ''))
 		.pipe(replace('</body>', '<script>' + fs.readFileSync('build/js/scripts.min.js', 'utf8') + '</script></body>'))
-//		.pipe(htmlmin({ collapseWhitespace: true }))
-//		.pipe(replace('<br', ' <br'))
 		.pipe(gulp.dest('build'))
 
 });

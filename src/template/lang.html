@@ -1,0 +1,25 @@
+		<div class="lang">
+
+{% for _lang in [
+	{
+		name : "English",
+		flag : "en"
+	},
+	{
+		name : "Русский",
+		flag : "ru"
+	}
+]%}
+
+	{% if _lang.flag !== lang %}
+
+			<a href="/{% if _lang.flag !== 'en' %}{{ _lang.flag }}/{% endif %}{{ folder }}">
+				<img src="/img/lang/{{ _lang.flag }}.svg" width="24" height="18" loading="lazy" alt="{{ _lang.name }}">
+			</a>
+
+	{% endif %}
+
+{% endfor %}
+
+
+		</div>
