@@ -10,7 +10,7 @@
 
 						<div class="footer__logo">
 
-							<a href="/">
+							<a href="{{ subdomain }}/">
 
 								<img src="/img/logo.svg" width="145" height="20" alt="{{ site }} logo">
 
@@ -23,18 +23,12 @@
 						<nav class="footer__menu">
 
 							<ul>
-								<li><a href="/terms-of-use/">{{ translate.MENU.TERMS_OF_USE[lang] }}</a></li>
-								<li><a href="/privacy-police/">{{ translate.MENU.PRIVACY_POLICE[lang] }}</a></li>
-								<li><a href="/about-us/">{{ translate.MENU.ABOUT_US[lang] }}</a></li>
+								<li><a href="{{ subdomain }}/terms-of-use/">{{ translate.MENU.TERMS_OF_USE[lang] }}</a></li>
+								<li><a href="{{ subdomain }}/privacy-police/">{{ translate.MENU.PRIVACY_POLICE[lang] }}</a></li>
+								<li><a href="{{ subdomain }}/about-us/">{{ translate.MENU.ABOUT_US[lang] }}</a></li>
 							</ul>
 
 						</nav>
-
-						<div class="footer__social">
-
-{% include "template/social.html" %}
-
-						</div>
 
 						<p class="footer__copyright">
 							© Zeroone 2024

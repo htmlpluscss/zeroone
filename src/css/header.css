@@ -28,6 +28,16 @@
 
 	}
 
+	.lang {
+
+		@media $desktop {
+
+			margin: 0 24px;
+
+		}
+
+	}
+
 	&__menu {
 
 		@media $mdWidth {
