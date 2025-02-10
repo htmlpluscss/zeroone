@@ -1,87 +1,108 @@
-{% set title = "О нас" %}
+{% set title = "About Us" %}
 
 {% extends "template/base.html" %}
 
 {% block content %}
 
-	<article class="page-text center">
+	<div class="page-text center">
 
-		<time datetime="2024-03-01" class="before">
-			Version 1.2, 1 March 2024
-		</time>
+		<div class="box page-text__bg-{{ folder }}">
 
-		<h1 class="page-text__title h1">
-			{{ title }}
-		</h1>
+			<div class="box__inner">
 
-		<div class="page-text__body">
+				<article>
 
-			<h2>
-				Legal Entity
-			</h2>
+					<h1 class="page-text__title h1">
+						{{ title }}
+					</h1>
 
-			<p>
-				Fenilux Soluções Financeiras Ltda (“Fenilux”) is a limited liability company incorporated in Brazil, under CNPJ No. 44.626.880/0001-81, with a registered office at Rua Manoel da Nóbrega, 1280, CEP 04001-902, Paraíso, São Paulo/SP.
-			</p>
+					<div class="page-text__body">
 
-			<p>
-				As a regulated entity, Fenilux is required to comply with all applicable laws, regulations, notices and guidelines issued by the relevant government and regulatory authority.
-			</p>
+						<p>
+							Welcome to ZeroOne, a global leader in revolutionizing online gaming and providing unparalleled experiences for gamers worldwide. Our platform offers diverse games, including Dota 2, Counter-Strike, Hearthstone, and many more, catering to the varied interests of our players around the world.
+						</p>
 
-			<h2>
-				Disclaimer
-			</h2>
+						<h2>
+							Our Mission
+						</h2>
 
-			<p>
-				The content published on this website has been carefully researched. However, the Fenilux cannot guarantee the actuality, correctness, completeness or quality of the information provided. The Fenilux accepts no liability for any indirect, mediate, incidental or consequential damages arising from or in connection with the use of this website.
-			</p>
+						<p>
+							At ZeroOne, our mission is clear: to create an inclusive and engaging gaming environment where players can interact, compete, and thrive regardless of geographical boundaries. We believe in the power of gaming to unite people from different cultures and walks of life, fostering friendships and camaraderie that transcend borders.
+						</p>
 
-			<p>
-				All offers are non-binding. The author explicitly reserves the right to amend, change or delete some of the pages or the entire offer without prior notice or cease publication temporarily or permanently. Separately agreed contractual obligations remain unaffected.
-			</p>
+						<h2>
+							Future Plans
+						</h2>
 
-			<h2>
-				References and (hyper)links
-			</h2>
+						<p>
+							As a global company committed to innovation and inclusivity, we are excited to announce our plans for tokenizing ZeroOne, enabling people around the world to become part of our journey. Through tokenization, we aim to democratize ownership and allow our global community to have a stake in ZeroOne's success. Whether you're in New York, Tokyo, Rio de Janeiro, or Moscow, you'll soon be able to participate in shaping the future of online gaming.
+						</p>
 
-			<p>
-				The content of linked websites or other referenced online resources do not necessarily reflect the opinions and intentions of the Fenilux. We do not take responsibility and do not assume liability for such content. The Fenilux assures that to his knowledge, at the time of posting a link, the respective websites and online resources were free from illegal content and dissociates itself explicitly from all content, especially those that have changed after the time of setting the link.
-			</p>
+						<p>
+							Stay tuned for updates as we embark on this innovative journey together. Join us at ZeroOne and experience the future of online gaming firsthand. Together, we can redefine the way games are played globally and connect gamers worldwide like never before.
+						</p>
 
-			<h2>
-				Copyright, trademarks and designs
-			</h2>
+					</div>
 
-			<p>
-				Fenilux is the exclusive owner of all personal rights, exploitation rights, trademark rights and rights in the sense of design protection of this website's contents and the optical and technical design including the source code.
-			</p>
+				</article>
 
-			<p>
-				All creations, trademarks and patents owned by a third party have been legally licensed. If necessary, the copyright owners and holders are named in compliance with those licenses.
-			</p>
+				<form action="/send/" class="form-feedback form box">
 
-			<h2>
-				Severability clause
-			</h2>
+					<input type="hidden" name="subject" value="feedback">
+					<input type="hidden" name="redirect" value="{{ auth }}">
 
-			<p>
-				If parts of the conditions, legal notices or disclaimers of liability are completely or partially legally void, the validity of the remaining clauses remains unaffected.
-			</p>
+					<div class="box__inner">
 
-			<h2>
-				Governing law and dispute resolution
-			</h2>
+						<p class="form__title h4">
+							Stay Connected
+						</p>
 
-			<p>
-				Although our website can be accessed from numerous places and countries around the world, that shall not be construed as consent to abide by that local jurisdiction. Any relationship between you and us arising out of these terms of use shall be governed by the laws of Brazil.
-			</p>
+						<div class="form__inputbox">
 
-			<p>
-				All disputes, arising out of these terms of use or related to them, including those arising out of or concerning its interpretation, invalidity, performance or termination, shall be referred for resolution to the competent courts in Brazil.
-			</p>
+							<label for="form-feedback" class="form__label">
+								E-mail
+							</label>
+
+							<input class="input" name="email" placeholder="Enter Data" required="required" id="form-feedback" type="email">
+
+						</div>
+
+						<div class="form__foot">
+
+							<button class="btn btn--orange form__submit">
+								Subscribe
+							</button>
+
+						</div>
+
+					</div>
+
+					<script type="text/html" class="form-template-done">
+
+						<div class="modal-done__ico">
+
+							<svg class="modal-done__ico-ok" width="72" height="72" viewBox="0 0 72 72">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m47.25 29-14 14-7-7"/>
+							</svg>
+
+						</div>
+
+						<div class="modal-done__title h6">
+							Спасибо за подписку!
+						</div>
+
+						<div class="modal-done__message">
+							Теперь Вы всегда будете в курсе последних новостей и событий.
+						</div>
+
+					</script>
+
+				</form>
+
+			</div>
 
 		</div>
 
-	</article>
+	</div>
 
 {% endblock %}

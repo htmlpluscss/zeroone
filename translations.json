@@ -10,4 +10,159 @@
 		"en" : "Next Generation Payment Network"
 	},
 
+	"MENU" : {
+		"TERMS_OF_USE" : {
+			"ru" : "Пользовательское соглашение",
+			"en" : "User Agreement"
+		},
+		"PRIVACY_POLICE" : {
+			"ru" : "Политика конфиденциальности",
+			"en" : "Privacy Policy"
+		},
+		"ABOUT_US" : {
+			"ru" : "О нас",
+			"en" : "About Us"
+		},
+		"LOGIN" : {
+			"ru" : "Войти",
+			"en" : "Login"
+		}
+	},
+
+	"FORM" : {
+		"TITLE" : {
+			"ru" : "Поставь на победу",
+			"en" : "Bet on Victory"
+		},
+		"YOUR_NICK" : {
+			"ru" : "Ваш ник",
+			"en" : "Your Nickname"
+		},
+		"PLACEHOLDER" : {
+			"ru" : "Введите данные",
+			"en" : "Enter Data"
+		},
+		"NAME" : {
+			"ru" : "Имя",
+			"en" : "Name"
+		},
+		"CURRENCY" : {
+			"ru" : "Валюта для оплаты",
+			"en" : "Payment Currency"
+		},
+		"GAME" : {
+			"ru" : "Выберите игру",
+			"en" : "Choose Game"
+		},
+		"CREATE_ACCOUNT" : {
+			"ru" : "Создать аккаунт",
+			"en" : "Create Account"
+		},
+		"RULE_TEXT" : {
+			"ru" : "Нажимая на кнопку “Создать аккаунт” я даю согласие на",
+			"en" : " By clicking 'Create Account', I agree to"
+		},
+		"RULE_LINK" : {
+			"ru" : "обработку персональных данных",
+			"en" : "the processing of personal data"
+		}
+	},
+
+	"FIRST_SCREEN" : {
+		"TITLE" : {
+			"ru" : "Запускай игру › <br> Побеждай своих соперников › <br> <b>Забирай выигрыш!</b>",
+			"en" : "Start the game › <br> Defeat your opponents › <br> <b>Claim your winnings!</b>"
+		},
+		"TEXT"  : {
+			"ru" : "Создай аккаунт и получи <b>1 000 ₽</b> на игровой счет.",
+			"en" : "Create an account and get <b>1,000₽</b> to your game balance."
+		},
+		"USERS" : {
+			"ru" : "игроков уже зарабатывают <br> на любимых играх!",
+			"en" : "players are already earning on <br> their favorite games!"
+		}
+	},
+
+	"RECENT_GAMES" : {
+		"TITLE" : {
+			"ru" : "Последние игры",
+			"en" : "Recent Games"
+		},
+		"TABLE" : {
+			"PLAYER" : {
+				"ru" : "Игрок",
+				"en" : "player"
+			},
+			"DATE" : {
+				"ru" : "Дата",
+				"en" : "Date"
+			},
+			"BET" : {
+				"ru" : "Ставка",
+				"en" : "Bet"
+			},
+			"ODDS" : {
+				"ru" : "Коэффициент",
+				"en" : "Odds"
+			},
+			"AMOUNT" : {
+				"ru" : "Сумма выплаты",
+				"en" : "Payout amount"
+			}
+		}
+	},
+
+	"VIDEO" : {
+		"TITLE" : {
+			"ru" : "Выиграй до 20х",
+			"en" : "Win up to 20x"
+		},
+		"TEXT"  : {
+			"ru" : "Откройте для себя острые ощущения: погрузитесь в Dota 2 и умножьте свою первоначальную ставку до 20 раз. <br>Ваш успех зависит от ваших навыков!",
+			"en" : "Discover the thrill: dive into Dota 2 and multiply <br>your initial bet up to 20 times."
+		}
+	},
+
+	"HOW_WORK" : {
+		"TITLE" : {
+			"ru" : "Как это работает",
+			"en" : "How It Works"
+		},
+		"HEAD_1"  : {
+			"ru" : "Подключись",
+			"en" : "Connect"
+		},
+		"TEXT_1"  : {
+			"ru" : "Подключите MetaMask, Steam и делайте ставку на любимую игру.",
+			"en" : "Connect MetaMask, Steam, and place a bet on your favorite game."
+		},
+		"HEAD_2"  : {
+			"ru" : "Рискуй",
+			"en" : "Take Risks"
+		},
+		"TEXT_2"  : {
+			"ru" : "Рискуйте и повышайте коэффициент, играя в системный мультиплейр.",
+			"en" : "Take risks and increase odds by playing in system multiplayer."
+		},
+		"HEAD_3"  : {
+			"ru" : "Выигрывай",
+			"en" : "Win"
+		},
+		"TEXT_3"  : {
+			"ru" : "Играйте в Dota 2, выигрывайте и зарабатывайте. Все зависит от вас.",
+			"en" : "Play Dota 2, win, and earn. It all depends on you."
+		}
+	},
+
+	"LAST_SCREEN" : {
+		"TITLE" : {
+			"ru" : "<b>Зарабатывай</b> <br> реальные деньги, <br> играя в любимые игры!",
+			"en" : "<b>Earn real money by</b> <br> playing your favorite games!"
+		},
+		"TEXT"  : {
+			"ru" : "игроков уже зарабатывают <br> на любимых играх!",
+			"en" : "players are already earning on <br> their favorite games!"
+		}
+	}
+
 }

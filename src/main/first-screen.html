@@ -11,13 +11,11 @@
 						<div class="first-screen__content">
 
 							<h1 class="first-screen__title h2">
-								Запускай игру › <br>
-								Побеждай своих соперников › <br>
-								<b>Забирай выигрыш!</b>
+								{{ translate.FIRST_SCREEN.TITLE[lang] | safe }}
 							</h1>
 
 							<p class="first-screen__text">
-								Создай аккаунт и получи <b>1 000 ₽</b> на игровой счет.
+								{{ translate.FIRST_SCREEN.TEXT[lang] | safe }}
 							</p>
 
 							<ul class="last-screen__games">
@@ -69,8 +67,7 @@
 								</p>
 
 								<p class="last-screen__users-text">
-									игроков уже зарабатывают <br>
-									на любимых играх!
+									{{ translate.FIRST_SCREEN.USERS[lang] | safe }}
 								</p>
 
 							</div>

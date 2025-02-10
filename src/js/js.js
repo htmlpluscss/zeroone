@@ -16,4 +16,6 @@ https://github.com/htmlpluscss/
 
 	});
 
+	Mustache.tags = ['<%','%>'];
+
 })();

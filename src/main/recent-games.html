@@ -9,7 +9,7 @@
 					<div class="recent-games__box">
 
 						<h2 class="recent-games__title h3">
-							Последние игры
+							{{ translate.RECENT_GAMES.TITLE[lang] }}
 						</h2>
 
 						<div class="tabs">
@@ -113,11 +113,9 @@
 
 		</div>
 
-{% raw %}
-
 		<script type="text/html" id="recent-games-table-template">
 
-			{{ #users }}
+			<% #users %>
 
 			<tr>
 
@@ -127,48 +125,48 @@
 
 						<picture>
 
-							<source srcset="/img/avatars/{{ avatar }}.webp 1x, /img/avatars/{{ avatar }}@2x.webp 2x" type="image/webp">
-							<source srcset="/img/avatars/{{ avatar }}.jpg 1x, /img/avatars/{{ avatar }}@2x.jpg 2x">
+							<source srcset="/img/avatars/<% avatar %>.webp 1x, /img/avatars/<% avatar %>@2x.webp 2x" type="image/webp">
+							<source srcset="/img/avatars/<% avatar %>.jpg 1x, /img/avatars/<% avatar %>@2x.jpg 2x">
 
-							<img src="/img/avatars/{{ avatar }}.jpg" width="44" height="44" alt="{{ name }}" loading="eager">
+							<img src="/img/avatars/<% avatar %>.jpg" width="44" height="44" alt="<% name %>" loading="eager">
 
 						</picture>
 
-						{{ name }}
+						<% name %>
 
 					</div>
 
 				</td>
 
 				<td class="recent-games-table__date">
-					{{ date }}
+					<% date %>
 				</td>
 
 				<td class="recent-games-table__bet">
-					{{ bet }} ₽
+					<% bet %> ₽
 				</td>
 
 				<td>
 
 					<div class="recent-games-table__rate">
-						<span>{{ multiplier }}х</span>
+						<span><% multiplier %>х</span>
 					</div>
 
 				</td>
 
 				<td class="recent-games-table__win">
-					{{ win }} ₽
+					<% win %> ₽
 				</td>
 
 			</tr>
 
-			{{ /users }}
+			<% /users %>
 
 		</script>
 
 		<script type="text/html" id="recent-games-column-template">
 
-			{{ #users }}
+			<% #users %>
 
 			<div class="recent-games-column__item">
 
@@ -176,14 +174,14 @@
 
 					<picture>
 
-						<source srcset="/img/avatars/{{ avatar }}.webp 1x, /img/avatars/{{ avatar }}@2x.webp 2x" type="image/webp">
-						<source srcset="/img/avatars/{{ avatar }}.png 1x, /img/avatars/{{ avatar }}@2x.png 2x">
+						<source srcset="/img/avatars/<% avatar %>.webp 1x, /img/avatars/<% avatar %>@2x.webp 2x" type="image/webp">
+						<source srcset="/img/avatars/<% avatar %>.png 1x, /img/avatars/<% avatar %>@2x.png 2x">
 
-						<img src="/img/avatars/{{ avatar }}.png" width="40" height="40" alt="{{ name }}" loading="eager">
+						<img src="/img/avatars/<% avatar %>.png" width="40" height="40" alt="<% name %>" loading="eager">
 
 					</picture>
 
-					{{ name }}
+					<% name %>
 
 				</div>
 
@@ -192,19 +190,19 @@
 					<dl>
 
 						<dt>
-							Дата
+							{{ translate.RECENT_GAMES.TABLE.DATE[lang] }}
 						</dt>
 
 						<dd>
-							{{ date }}
+							<% date %>
 						</dd>
 
 						<dt>
-							Ставка
+							{{ translate.RECENT_GAMES.TABLE.BET[lang] }}
 						</dt>
 
 						<dd>
-							{{ bet }} ₽
+							<% bet %> ₽
 						</dd>
 
 					</dl>
@@ -212,21 +210,21 @@
 					<dl>
 
 						<dt>
-							Коэффициент
+							{{ translate.RECENT_GAMES.TABLE.ODDS[lang] }}
 						</dt>
 
 						<dd>
 							<div class="recent-games-column__rate">
-								<span>{{ multiplier }}х</span>
+								<span><% multiplier %>х</span>
 							</div>
 						</dd>
 
 						<dt>
-							Сумма выплаты
+							{{ translate.RECENT_GAMES.TABLE.AMOUNT[lang] }}
 						</dt>
 
 						<dd class="recent-games-column__win">
-							{{ win }} ₽
+							<% win %> ₽
 						</dd>
 
 					</dl>
@@ -235,10 +233,8 @@
 
 			</div>
 
-			{{ /users }}
+			<% /users %>
 
 		</script>
-
-{% endraw %}
 
 	</article>

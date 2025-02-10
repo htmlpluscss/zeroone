@@ -6,16 +6,16 @@
 					<div class="form__fieldset">
 
 						<p class="form-create__title h4">
-							Поставь на победу
+							{{ translate.FORM.TITLE[lang] }}
 						</p>
 
 						<div class="form-create__inputbox">
 
 							<label for="form-create-nick-2" class="form__label">
-								Ваш ник
+								{{ translate.FORM.YOUR_NICK[lang] }}
 							</label>
 
-							<input class="input" name="nick" placeholder="Введите данные" required="required" id="form-create-nick-2">
+							<input class="input" name="nick" placeholder="{{ translate.FORM.PLACEHOLDER[lang] }}" required="required" id="form-create-nick-2">
 
 						</div>
 
@@ -25,7 +25,7 @@
 								E-mail
 							</label>
 
-							<input class="input" name="email" placeholder="Введите данные" required="required" id="form-create-email-2" type="email">
+							<input class="input" name="email" placeholder="{{ translate.FORM.PLACEHOLDER[lang] }}" required="required" id="form-create-email-2" type="email">
 
 						</div>
 
@@ -37,7 +37,7 @@
 
 							<div class="form-create__telegram">
 
-								<input class="input" name="telegram" placeholder="Введите данные" id="form-create-telegram">
+								<input class="input" name="telegram" placeholder="{{ translate.FORM.PLACEHOLDER[lang] }}" id="form-create-telegram">
 
 							</div>
 
@@ -48,7 +48,7 @@
 							<div class="form-create__inputbox">
 
 								<label for="form-create-currency" class="form__label">
-									Валюта для оплаты
+									{{ translate.FORM.CURRENCY[lang] }}
 								</label>
 
 								<div class="select">
@@ -69,7 +69,7 @@
 							<div class="form-create__inputbox">
 
 								<label for="form-create-game" class="form__label">
-									Выберите игру
+									{{ translate.FORM.GAME[lang] }}
 								</label>
 
 								<div class="select">
@@ -91,18 +91,17 @@
 						<div class="form-create__foot">
 
 							<button class="btn btn--orange form__submit">
-								Создать аккаунт
+								{{ translate.FORM.CREATE_ACCOUNT[lang] }}
 							</button>
 
 						</div>
 
 						<p class="form-create__alt">
-							Нажимая на кнопку “Создать аккаунт” я даю согласие на <a href="/privacy-police/" target="_blank">обработку персональных данных</a>
+							{{ translate.FORM.RULE_TEXT[lang] }}
+							<a href="{{ subdomain }}/privacy-police/" target="_blank">{{ translate.FORM.RULE_LINK[lang] }}</a>
 						</p>
 
 					</div>
-
-{% raw %}
 
 					<script type="text/html" class="form-template-done">
 
@@ -123,7 +122,5 @@
 						</div>
 
 					</script>
-
-{% endraw %}
 
 				</form>

@@ -6,16 +6,16 @@
 					<div class="form__fieldset">
 
 						<p class="form-create__title h4">
-							Поставь на победу
+							{{ translate.FORM.TITLE[lang] }}
 						</p>
 
 						<div class="form-create__inputbox">
 
 							<label for="form-create-name" class="form__label">
-								Имя
+								{{ translate.FORM.NAME[lang] }}
 							</label>
 
-							<input class="input" name="name" placeholder="Введите данные" required="required" id="form-create-name">
+							<input class="input" name="name" placeholder="{{ translate.FORM.PLACEHOLDER[lang] }}" required="required" id="form-create-name">
 
 						</div>
 
@@ -25,14 +25,14 @@
 								E-mail
 							</label>
 
-							<input class="input" name="email" placeholder="Введите данные" required="required" id="form-create-email" type="email">
+							<input class="input" name="email" placeholder="{{ translate.FORM.PLACEHOLDER[lang] }}" required="required" id="form-create-email" type="email">
 
 						</div>
 
 						<div class="form-create__foot">
 
 							<button class="btn btn--orange form__submit">
-								Создать аккаунт
+								{{ translate.FORM.CREATE_ACCOUNT[lang] }}
 							</button>
 
 						</div>
@@ -44,8 +44,6 @@
 					</p>
 
 {% include "template/social.html" %}
-
-{% raw %}
 
 					<script type="text/html" class="form-template-done">
 
@@ -66,7 +64,5 @@
 						</div>
 
 					</script>
-
-{% endraw %}
 
 				</form>
